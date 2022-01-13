@@ -509,4 +509,27 @@ class AdminController extends Controller
         return redirect()->back()->with('message','Blood Bank Added Successfully');
         
     }
+    function bloodList(){
+        $bank=Bank::all();
+        return view('admin.blood_list',compact('bank'));
+    }
+    function deleteBank($id){
+        $bank= Bank::find($id);
+        $bank->delete();
+        return redirect()->back();
+    }
+    function updateBank($id){
+        $bank=Bank::find($id);
+        return view('admin.update_bank',compact('bank'));
+      
+    }
+    function editBank(Request $req,$id){
+        $bank=Bank::find($id);
+        $bank->name=$req->name;
+      
+        $bank->address=$req->address;
+        $bank->phone=$req->phone;
+        $bank->save();
+        return redirect()->back();
+    }
 }

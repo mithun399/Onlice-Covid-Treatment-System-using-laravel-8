@@ -258,7 +258,9 @@ class HomeController extends Controller
         $bank=Bank::paginate(12);
         return view('user.b_bank',compact('bank'));
     }
-   
+   function sample(){
+       return view('user.sample');
+   }
 
 }
 

@@ -53,6 +53,7 @@ Route::post('/user_donor',[HomeController::class,'userDonor']);
 Route::get('/donorlist',[HomeController::class,'donor']);
 Route::get('/b_bank',[HomeController::class,'bloodBank']);
 
+Route::get('/sample',[HomeController::class,'sample']);
 
 
 
@@ -150,6 +151,10 @@ Route::post('/editdonor/{id}',[AdminController::class,'editDonors']);
 
 Route::get('/add_blood',[AdminController::class,'addBlood']);
 Route::post('/upload_blood',[AdminController::class,'uploadBank']);
+Route::get('/blood_list',[AdminController::class,'bloodList']);
+Route::get('/delete_bank/{id}',[AdminController::class,'deleteBank']);
+Route::get('/update_bank/{id}',[AdminController::class,'updateBank']);
+Route::post('/editbank/{id}',[AdminController::class,'editBank']);
 
 
 
