@@ -56,6 +56,7 @@ Route::get('/b_bank',[HomeController::class,'bloodBank']);
 Route::get('/sample',[HomeController::class,'sample']);
 Route::post('/upload_sample',[HomeController::class,'uploadSample']);
 
+Route::get('/org',[HomeController::class,'org']);
 
 
 

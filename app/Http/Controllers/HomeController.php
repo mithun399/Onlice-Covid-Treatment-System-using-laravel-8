@@ -273,5 +273,8 @@ class HomeController extends Controller
       return redirect()->back()->with('message','Request Successful.We will contact with you soon...');
 
    }
+   function org(){
+       return view('user.org');
+   }
 }
 
