@@ -22,6 +22,7 @@ use App\Models\Khulna;
 use App\Models\Barishal;
 use App\Models\Donor;
 use App\Models\Bank;
+use App\Models\Sample;
 
 
 
@@ -261,6 +262,16 @@ class HomeController extends Controller
    function sample(){
        return view('user.sample');
    }
+  function uploadSample(Request $req){
+      $sample=new Sample;
+      $sample->name=$req->name;
+      $sample->email=$req->email;
+      $sample->number=$req->phone;
+      $sample->date=$req->date;
+      $sample->message=$req->message;
+      $sample->save();
+      return redirect()->back()->with('message','Request Successful.We will contact with you soon...');
 
+   }
 }
 

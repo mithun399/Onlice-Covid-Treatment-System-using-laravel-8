@@ -119,12 +119,21 @@
     </nav>
   </header>
 
+  @if(session()->has('message'))
+          <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+          {{session()->get('message')}}
+          </div>
+
+        @endif
+
   <!--Form Start-->
+
   <div class="page-section">
     <div class="container">
       <h1 class="text-center wow fadeInUp">CALLED FOR COVID SAMPLE</h1>
-
-      <form class="main-form" method="POST" action="#">
+     
+      <form class="main-form" method="POST" action="{{url('upload_sample')}}">
         @csrf
         <div class="row mt-5 ">
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
