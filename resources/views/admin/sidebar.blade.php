@@ -108,6 +108,18 @@
              </ul>
           </div>
         </li>
+        <li>
+          <div class="dropdown" style="padding:15px;">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+             Org Helpline
+            </button>
+             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+               <li><a class="dropdown-item" href="{{url('add_org')}}">Add Org</a></li>
+               <li><a class="dropdown-item" href="#">Org List</a></li>
+    
+             </ul>
+          </div>
+        </li>
        
           </ul>
         </nav>

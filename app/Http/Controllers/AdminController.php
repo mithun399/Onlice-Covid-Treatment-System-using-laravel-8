@@ -18,11 +18,7 @@ use App\Models\Khulna;
 use App\Models\Barishal;
 use App\Models\Donor;
 use App\Models\Bank;
-
-
-
-
-
+use App\Models\Organisation;
 
 
 
@@ -531,5 +527,18 @@ class AdminController extends Controller
         $bank->phone=$req->phone;
         $bank->save();
         return redirect()->back();
+    }
+    function addOrg(){
+        return view('admin.add_org');
+    }
+    function uploadOrg(Request $req){
+        $org=new Organisation;
+        $org->name=$req->name;
+        $org->type=$req->type;
+        $org->address=$org->address;
+        $org->phone=$req->phone;
+        $org->webaddress=$req->webaddress;
+        $org->save();
+        return redirect()->back()->with('message','Org Added Successfully');
     }
 }

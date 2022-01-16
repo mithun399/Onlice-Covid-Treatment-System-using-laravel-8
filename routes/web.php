@@ -158,6 +158,8 @@ Route::get('/delete_bank/{id}',[AdminController::class,'deleteBank']);
 Route::get('/update_bank/{id}',[AdminController::class,'updateBank']);
 Route::post('/editbank/{id}',[AdminController::class,'editBank']);
 
+Route::get('/add_org',[AdminController::class,'addOrg']);
+Route::post('/upload_org',[AdminController::class,'uploadOrg']);
 
 
 

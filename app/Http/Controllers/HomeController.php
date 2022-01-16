@@ -23,6 +23,7 @@ use App\Models\Barishal;
 use App\Models\Donor;
 use App\Models\Bank;
 use App\Models\Sample;
+use App\Models\Organisation;
 
 
 
@@ -270,11 +271,12 @@ class HomeController extends Controller
       $sample->date=$req->date;
       $sample->message=$req->message;
       $sample->save();
-      return redirect()->back()->with('message','Request Successful.We will contact with you soon...');
+      return redirect()->back()->with('message','Request Successful.We will contact you within 30 minutes...');
 
    }
    function org(){
-       return view('user.org');
+       $org=Organisation::paginate(10);
+       return view('user.org',compact('org'));
    }
 }
 

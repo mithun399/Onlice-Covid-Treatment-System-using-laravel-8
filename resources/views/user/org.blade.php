@@ -122,7 +122,28 @@
   </header>
 
 
+  <a href="/blood">Go Back</a>
+  <div class="text-center ">
+<h1>ORG LIST</h1>
+  </div>
+  <div class="container">
+  <div class="row">
+      @foreach($org as $or)
+ 
+    <div class="col-sm-4 text-center  " style="color:;">
+    <img style="height:70px;width:70px;" src="https://upload.wikimedia.org/wikipedia/commons/f/f8/ORG_RGB.png" alt="">
+      <p><b>Name:{{$or->name}}</b></p>
+      <p><b>Types:{{$or->type}}</b></p>
+      <p><b>Address:{{$or->address}}</b></p>
+      <p><b>Phone:{{$or->phone}}</b></p>
+      <p><b>Web Address:{{$or->webaddress}}</b></p>
+     <a class="btn btn-primary" href="tel:{{$or->phone}}">Call</a>
 
+
+    </div>
+  @endforeach
+  </div>
+</div>
 
 
 
