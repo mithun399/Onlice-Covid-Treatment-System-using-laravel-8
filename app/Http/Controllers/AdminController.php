@@ -541,4 +541,27 @@ class AdminController extends Controller
         $org->save();
         return redirect()->back()->with('message','Org Added Successfully');
     }
+    function orgList(){
+        $org=Organisation::all();
+        return view('admin.orglist',compact('org'));
+    }
+    function deleteOrg($id){
+        $org=Organisation::find($id);
+        $org->delete();
+        return redirect()->back();
+    }
+    function updateOrg($id){
+        $org=Organisation::find($id);
+        return view('admin.update_org',compact('org'));
+    }
+    function editOrg(Request $req,$id){
+        $org=Organisation::find($id);
+        $org->name=$req->name;
+        $org->type=$req->type;
+        $org->address=$req->address;
+        $org->phone=$req->phone;
+        $org->webaddress=$req->webaddress;
+        $org->save();
+        return redirect('orglist');
+    }
 }

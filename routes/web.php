@@ -160,6 +160,10 @@ Route::post('/editbank/{id}',[AdminController::class,'editBank']);
 
 Route::get('/add_org',[AdminController::class,'addOrg']);
 Route::post('/upload_org',[AdminController::class,'uploadOrg']);
+Route::get('/orglist',[AdminController::class,'orgList']);
+Route::get('/delete_org/{id}',[AdminController::class,'deleteOrg']);
+Route::get('/update_org/{id}',[AdminController::class,'updateOrg']);
+Route::post('/editorg/{id}',[AdminController::class,'editOrg']);
 
 
 

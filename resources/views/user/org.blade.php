@@ -131,7 +131,7 @@
       @foreach($org as $or)
  
     <div class="col-sm-4 text-center  " style="color:;">
-    <img style="height:70px;width:70px;" src="https://upload.wikimedia.org/wikipedia/commons/f/f8/ORG_RGB.png" alt="">
+    <img style="height:80px;width:95px;" src="https://upload.wikimedia.org/wikipedia/commons/f/f8/ORG_RGB.png" alt="">
       <p><b>Name:{{$or->name}}</b></p>
       <p><b>Types:{{$or->type}}</b></p>
       <p><b>Address:{{$or->address}}</b></p>
