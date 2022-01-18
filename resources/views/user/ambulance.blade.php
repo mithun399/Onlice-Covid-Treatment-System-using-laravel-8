@@ -120,6 +120,22 @@
       </div> <!-- .container -->
     </nav>
   </header>
+  <!--map-->
+  <div id="map" style="width:100%;height:400px;">
+  <script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(51.5, -0.2), zoom: 10
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+</script>
+}
+</div>
+  <!--map-->
+
+ 
   <div>
       <img style="width:100%; height:500px;"  src="https://www.dhakaambulance.com.bd/public/assets/img/home3.png" alt="">
   </div>
@@ -196,6 +212,7 @@
       <p id="copyright">Copyright &copy; 2021 <a href="https://www.facebook.com/mithun.sutradhar.399041/" target="_blank">Mithun Sutradhar</a>. All right reserved</p>
     </div>
   </footer>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
 
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
