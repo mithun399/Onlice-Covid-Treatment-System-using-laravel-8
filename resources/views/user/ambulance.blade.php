@@ -120,20 +120,7 @@
       </div> <!-- .container -->
     </nav>
   </header>
-  <!--map-->
-  <div id="map" style="width:100%;height:400px;">
-  <script>
-function myMap() {
-  var mapCanvas = document.getElementById("map");
-  var mapOptions = {
-    center: new google.maps.LatLng(51.5, -0.2), zoom: 10
-  };
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-}
-</script>
-}
-</div>
-  <!--map-->
+ 
 
  
   <div>
@@ -161,6 +148,16 @@ function myMap() {
 <a class="btn btn-warning btn-block" href="{{url('khulna')}}"><b>KHULNA</b></a>
 <a class="btn btn-secondary btn-block" href="{{url('barishal')}}"><b>BARISHAL</b></a>
 </div>
+ <!--map-->
+ <div  style="width:100%; height:100%;">
+ <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236206.4779141557!2d91.67977725733253!3d22.326191787611783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd8a64095dfd3%3A0x5015cc5bcb6905d9!2sChattogram!5e0!3m2!1sen!2sbd!4v1642530129447!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+ 
+
+
+  <!--map-->
+
+
   <footer class="page-footer">
     <div class="container">
       <div class="row px-md-3">
@@ -212,7 +209,7 @@ function myMap() {
       <p id="copyright">Copyright &copy; 2021 <a href="https://www.facebook.com/mithun.sutradhar.399041/" target="_blank">Mithun Sutradhar</a>. All right reserved</p>
     </div>
   </footer>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+ 
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
 
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
