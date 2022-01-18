@@ -54,6 +54,7 @@ class DoctorController extends Controller
             $doctor->image=$filename;
         }
         $doctor->time=$req->time;
+        $doctor->fee=$req->fee;
         $doctor->save();
         return redirect()->back();
 

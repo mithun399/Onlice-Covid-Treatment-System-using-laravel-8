@@ -78,6 +78,10 @@
   <div class="form-group">
     <label>Time</label>
     <input type="text" name="time" class="form-control"  placeholder="Enter the Time" required>
+  </div>
+  <div class="form-group">
+    <label>Fees</label>
+    <input type="text" name="fee" class="form-control"  placeholder="Enter the Fees" required>
   </div><br>
   
   <button type="submit" class="btn btn-primary">Submit</button>

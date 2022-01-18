@@ -44,7 +44,8 @@ class AdminController extends Controller
         $file->move('doctor',$filename);
         $doctor->image=$filename;
     }
-
+    $doctor->time=$req->time;
+    $doctor->fee=$req->fee;
     $doctor->save();
     return redirect()->back()->with('message','Doctor Added Successfully');
     }

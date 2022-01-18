@@ -54,6 +54,10 @@
   <div class="form-group">
     <label>Time</label>
     <input type="text" name="time" value="{{$data->time}}" class="form-control"  placeholder="Time" required>
+  </div>
+  <div class="form-group">
+    <label>Fees</label>
+    <input type="text" name="fee" value="{{$data->fee}}" class="form-control"  placeholder="Fees" required>
   </div><br>
   <button type="submit" class="btn btn-primary">Update</button>
         </form>

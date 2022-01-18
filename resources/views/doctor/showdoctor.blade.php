@@ -27,6 +27,7 @@
                     <th style="padding:10px;font-size: 20px;color:white">Room</th>
                     <th style="padding:10px;font-size: 20px;color:white">Image</th>
                     <th style="padding:10px;font-size: 20px;color:white">Time</th>
+                    <th style="padding:10px;font-size: 20px;color:white">Fees</th>
 
                     <th style="padding:10px;font-size: 20px;color:white">Delete</th>
                     <th style="padding:10px;font-size: 20px;color:white">Update</th>
@@ -40,6 +41,7 @@
                     <td style="padding:10px;font-size: 20px;color:black">{{$doctor->room}}</td>
                     <td style="padding:10px;font-size: 20px;color:black"><img height="100px;" width="100px;" src="doctor/{{$doctor->image}}" alt=""></td>
                     <td style="padding:10px;font-size: 20px;color:black">{{$doctor->time}}</td>
+                    <td style="padding:10px;font-size: 20px;color:black">{{$doctor->fee}}</td>
 
                     <td><a class="btn btn-danger" onclick="return confirm('Are You Sure to Delte This?')" href="{{url('deletedoctor',$doctor->id)}}">Delete</a></td>
                     <td><a class="btn btn-primary" href="{{url('updatedoctor',$doctor->id)}}">Update</a></td>

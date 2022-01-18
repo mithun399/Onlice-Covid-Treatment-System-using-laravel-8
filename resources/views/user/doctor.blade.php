@@ -16,6 +16,7 @@
             <div class="body">
               <p class="text-xl mb-0">{{$doctors->name}}</p>
               <p class="text-xl mb-0">Available:{{$doctors->time}}</p>
+              <p class="text-xl mb-0">Fees:{{$doctors->fee}}</p>
               <span class="text-sm text-grey">{{$doctors->speciality}}</span>
             </div>
           </div>

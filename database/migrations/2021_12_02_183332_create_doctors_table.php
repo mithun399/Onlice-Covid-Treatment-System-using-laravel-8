@@ -22,6 +22,8 @@ class CreateDoctorsTable extends Migration
             $table->string('room')->nullable();
             $table->string('image')->nullable();
             $table->string('time')->nullable();
+            $table->string('fee')->nullable();
+
 
             $table->timestamps();
         });
