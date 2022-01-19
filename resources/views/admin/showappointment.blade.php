@@ -30,6 +30,8 @@
                     <th style="padding:10px;font-size: 20px;color:white">Date</th>
                     <th style="padding:10px;font-size: 20px;color:white">Message</th>
                     <th style="padding:10px;font-size: 20px;color:white">Status</th>
+                    
+
                     <th style="padding:10px;font-size: 20px;color:white">Approved</th>
                     <th style="padding:10px;font-size: 20px;color:white">Cancel</th>
 

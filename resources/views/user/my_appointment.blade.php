@@ -125,6 +125,9 @@
             <th style="padding:10px;font-size:20px;color:white">Date</th>
             <th style="padding:10px;font-size:20px;color:white">Message</th>
             <th style="padding:10px;font-size:20px;color:white">Status</th>
+            
+            <th style="padding:10px;font-size:20px;color:white">Time</th>
+
             <th style="padding:10px;font-size:20px;color:white">Cancel Appointment</th>
 
         </tr>
@@ -135,6 +138,8 @@
             <td style="padding:10px;font-size: 20px;color:white">{{$appointments->date}}</td>
             <td style="padding:10px;font-size: 20px;color:white">{{$appointments->message}}</td>
             <td style="padding:10px;font-size: 20px;color:white">{{$appointments->status}}</td>
+            <td style="padding:10px;font-size: 20px;color:white">{{$appointments->time}}</td>
+
            <td><a href="{{url('cancel_appoint',$appointments->id)}}" class="btn btn-danger" onclick="return confirm('Are you sure to delete this?')">Cancel</a></td>
         </tr>
         @endforeach

@@ -72,6 +72,7 @@ class HomeController extends Controller
         $appointment->message=$req->message;
         $appointment->doctor=$req->doctor;
         $appointment->status='In Progress';
+        $appointment->time=$req->time;
         if(Auth::id()){
             $appointment->user_id=Auth::user()->id;
         }
@@ -92,13 +93,21 @@ class HomeController extends Controller
 }
     public function cancel_appoint($id) {
         $appointment=appointment::find($id);
-        if(status=="In Progress"){
-        $appointment->delete();
-        }
-        elseif(status=="canceled"){
-        $appointment->delete();
-        }
+        $status="In Progress";
+        $stat="canceled";
+        $appointment=appointment::where('status',$status)->delete();
+        $appointment=appointment::where('status',$stat)->delete();
         return redirect()->back();
+        //$appointment->delete();
+       
+        /*if($appointment=="In Progress"){
+        $appointment->delete();
+        }
+        elseif($appointment=="canceled"){
+        $appointment->delete();
+        }
+        else {
+        return redirect()->back();}*/
     }
     public function doctors(){
         $doctor=Doctor::all();

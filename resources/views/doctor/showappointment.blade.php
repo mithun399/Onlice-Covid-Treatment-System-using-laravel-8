@@ -27,6 +27,8 @@
                     <th style="padding:10px;font-size: 20px;color:white">Date</th>
                     <th style="padding:10px;font-size: 20px;color:white">Message</th>
                     <th style="padding:10px;font-size: 20px;color:white">Status</th>
+                    <th style="padding:10px;font-size: 20px;color:white">Time</th>
+
                     <th style="padding:10px;font-size: 20px;color:white">Approved</th>
                     <th style="padding:10px;font-size: 20px;color:white">Cancel</th>
 
@@ -41,8 +43,12 @@
                     <td style="padding:10px;font-size: 20px;color:black">{{$show->date}}</td>
                     <td style="padding:10px;font-size: 20px;color:black">{{$show->message}}</td>
                     <td style="padding:10px;font-size: 20px;color:black">{{$show->status}}</td>
+                    <td style="padding:10px;font-size: 20px;color:black">{{$show->time}}</td>
+
                     <td><a class="btn btn-success" href="{{url('approved',$show->id)}}">Approved</a></td>
                     <td><a class="btn btn-danger" href="{{url('canceled',$show->id)}}">Canceled</a></td>
+                    
+
                 </tr>  
                 @endforeach
             </table>

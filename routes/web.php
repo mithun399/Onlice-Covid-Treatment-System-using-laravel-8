@@ -206,3 +206,6 @@ Route::get('/deletedoctor/{id}',[DoctorController::class,'deletedoctor']);
 Route::get('/updatedoctor/{id}',[DoctorController::class,'updatedoctor']);
 Route::post('/editdoctor/{id}',[DoctorController::class,'editdoctor']);
 Route::get('/showdoctor',[DoctorController::class,'showdoctor']);
+
+
+

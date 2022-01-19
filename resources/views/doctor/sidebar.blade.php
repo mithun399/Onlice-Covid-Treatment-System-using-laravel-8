@@ -24,6 +24,7 @@
                 <span>Appointments</span>
               </a>
             </li>
+           
 
             <li>
               <a href="{{url('showdoctor')}}" class="nav-link px-3 active">
