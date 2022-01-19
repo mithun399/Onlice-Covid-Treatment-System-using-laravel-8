@@ -8,6 +8,7 @@ use App\Models\Doctor;
 use App\Models\Appointment;
 use App\Models\Patient;
 use App\Models\Pharmacy;
+use App\Models\Our;
 use App\Models\Dhaka;
 use App\Models\Chittagong;
 use App\Models\Sylhet;
@@ -19,7 +20,6 @@ use App\Models\Barishal;
 use App\Models\Donor;
 use App\Models\Bank;
 use App\Models\Plasma;
-
 use App\Models\Organisation;
 
 
@@ -192,6 +192,42 @@ class AdminController extends Controller
         $data->delete();
         return redirect()->back();
     }
+    function ourhospital(){
+        return view('admin.ours');
+    }
+    function uploadour(Request $req){
+        $ours= new Our;
+        $ours->name=$req->name;
+        $ours->address=$req->address;
+        $ours->phone=$req->phone;
+        $ours->save();
+        return redirect()->back()->with('message','Ambulance Added Successfully');
+    }
+    function ourList(){
+        $dhaka=Dhaka::all();
+     return view('admin.dhaka_list',compact('dhaka'));
+    }
+    function deleteOur($id){
+        $dhaka= Dhaka::find($id);
+        $dhaka->delete();
+        return redirect()->back();
+    }
+    function updateOur($id){
+        $dhaka=Dhaka::find($id);
+        return view('admin.update_dhaka',compact('dhaka'));
+     
+    }
+    function editOur(Request $req,$id){
+        $dhaka=Dhaka::find($id);
+        $dhaka->name=$req->name;
+        $dhaka->address=$req->address;
+        $dhaka->phone=$req->phone;
+        $dhaka->save();
+        return redirect()->back();
+    }
+
+
+
     function dhakam(){
         return view('admin.dhakam');
     }
