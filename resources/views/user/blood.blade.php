@@ -124,8 +124,12 @@
   </div>
 <div class="mx-auto" align="center" style="padding:50px;">
 <a class="btn btn-danger" href="{{url('b_bank')}}">Blood Bank</a>
-<a class="btn btn-primary" href="{{url('donorlist')}}">Donor List</a>
+<a class="btn btn-primary" href="{{url('donorlist')}}">Blood Donor List</a>
+<a class="btn btn-danger" href="{{url('plasmadonor')}}">Plasma Donor List</a>
+
 </div>
+<!--Start Blood Form-->
+
 <div class="d-flex justify-content-center">
   <h1>JOIN AS A BLOOD DONOR</h1>
 </div>
@@ -162,10 +166,56 @@
  
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+
+
+</div>
+<!--End Blood Form-->
+
+<!--Start Plasma Form-->
+
+<div class="d-flex justify-content-center">
+  <h1>JOIN AS A PLASMA DONOR</h1>
 </div>
 
 
 
+<div class="d-flex justify-content-center">
+<form action="{{url('plasma_donor')}}" method="POST">
+  @csrf
+  <div class="form-group">
+   <label>Name</label>
+    <input type="text" name="name" class="form-control"   placeholder="Enter Donor Name">
+  </div>
+  <div class="form-group">
+  <label>Blood Group</label>
+    <select class="form-control" name="blood" required>
+        <option value="">--Select Blood--</option>
+      <option>A+</option>
+      <option>A-</option>
+      <option>B+</option>
+      <option>B-</option>
+      <option>AB+</option>
+      <option>AB-</option>
+      <option>O+</option>
+      <option>O-</option>
+
+    </select>
+  </div>
+  <div class="form-group">
+  <label>Address</label>
+    <input type="text" name="address" class="form-control"   placeholder="Enter Address">
+  </div>
+  <div class="form-group">
+    <label>Phone</label>
+    <input type="number" name="phone" class="form-control"   placeholder="Enter Phone Number">
+  </div>
+ 
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+<!--End Plasma Form-->
 
 
 

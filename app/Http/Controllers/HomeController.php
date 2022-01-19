@@ -21,18 +21,15 @@ use App\Models\Rajshahi;
 use App\Models\Khulna;
 use App\Models\Barishal;
 use App\Models\Donor;
+use App\Models\Plasma;
 use App\Models\Bank;
 use App\Models\Sample;
 use App\Models\Organisation;
-
-
-
-
-
-
-
-
 use Session;
+
+
+
+
 
 class HomeController extends Controller
 {
@@ -260,6 +257,19 @@ class HomeController extends Controller
         $bank=Bank::paginate(12);
         return view('user.b_bank',compact('bank'));
     }
+    function plasmaDonor(Request $req){
+        $donor=new Plasma;
+        $donor->name=$req->name;
+        $donor->blood=$req->blood;
+        $donor->address=$req->address;
+        $donor->phone=$req->phone;
+        $donor->save();
+        return redirect()->back();
+    }
+    function plasmadono(){
+        $donor=Plasma::paginate(12);
+        return view('user.plasmadonor',compact('donor'));
+    }
    function sample(){
        return view('user.sample');
    }
@@ -277,6 +287,10 @@ class HomeController extends Controller
    function org(){
        $org=Organisation::paginate(10);
        return view('user.org',compact('org'));
+   }
+   function consult(){
+    $doctor=Doctor::all();
+       return view('user.consult',compact('doctor'));
    }
 }
 

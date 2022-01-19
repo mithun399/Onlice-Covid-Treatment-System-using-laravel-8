@@ -27,6 +27,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::post('/appointment',[HomeController::class,'appointment']);
 Route::get('/myappointment',[HomeController::class,'myappointment']);
+Route::get('/consult',[HomeController::class,'consult']);
+
 Route::get('/doctors',[HomeController::class,'doctors']);
 Route::get('/patients',[HomeController::class,'patients']);
 Route::get('/pharmacy',[HomeController::class,'pharmacy']);
@@ -50,6 +52,9 @@ Route::get('/barishal',[HomeController::class,'barishal']);
 
 Route::get('/blood',[HomeController::class,'blood']);
 Route::post('/user_donor',[HomeController::class,'userDonor']);
+Route::post('/plasma_donor',[HomeController::class,'plasmaDonor']);
+Route::get('/plasmadonor',[HomeController::class,'plasmadono']);
+
 Route::get('/donorlist',[HomeController::class,'donor']);
 Route::get('/b_bank',[HomeController::class,'bloodBank']);
 
