@@ -133,6 +133,8 @@
     <p><b>Name:{{$khu->name}}</b></p>
     <p><b>Address:{{$khu->address}}</b></p>
     <p><b>Phone:{{$khu->phone}}</b></p>
+    <a class="btn btn-primary" href="tel:{{$khu->phone}}">Call</a>
+
     </div>
     @endforeach
 </div>

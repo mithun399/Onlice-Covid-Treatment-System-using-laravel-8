@@ -12,6 +12,7 @@ use App\Models\Patient;
 use App\Models\Pharmacy;
 use App\Models\Cart;
 use App\Models\Order;
+use App\Models\Our;
 use App\Models\Dhaka;
 use App\Models\Chittagong;
 use App\Models\Sylhet;
@@ -91,7 +92,12 @@ class HomeController extends Controller
 }
     public function cancel_appoint($id) {
         $appointment=appointment::find($id);
+        if(status=="In Progress"){
         $appointment->delete();
+        }
+        elseif(status=="canceled"){
+        $appointment->delete();
+        }
         return redirect()->back();
     }
     public function doctors(){
@@ -204,6 +210,10 @@ class HomeController extends Controller
     }
     function ambulance(){
         return view('user.ambulance');
+    }
+    function our(){
+        $our=Our::paginate(10);
+        return view('user.ourhospital',compact('our'));
     }
     function dhaka(){
         $dha=Dhaka::paginate(10);

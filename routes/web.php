@@ -40,7 +40,9 @@ Route::get('/buynow',[HomeController::class,'buyNow']);
 Route::post('/orderplace',[HomeController::class,'orderPlace']);
 Route::get('/myorders',[HomeController::class,'myOrders']);
 Route::get('removeorder/{id}',[HomeController::class,'removeOrder']);
+
 Route::get('/ambulance',[HomeController::class,'ambulance']);
+Route::get('/ourhospital',[HomeController::class,'our']);
 Route::get('/dhaka',[HomeController::class,'dhaka']);
 Route::get('/cha',[HomeController::class,'cha']);
 Route::get('/sylhet',[HomeController::class,'syl']);

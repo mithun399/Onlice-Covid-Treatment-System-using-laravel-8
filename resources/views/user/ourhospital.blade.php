@@ -120,43 +120,33 @@
       </div> <!-- .container -->
     </nav>
   </header>
- 
+  <br>
+  <a class="btn btn-primary" href="{{url('ambulance')}}">Go Back</a>
+  <br>
+  <div class="container">
+  <div class="row">
+  @foreach($our as $ou)
+  <div class="col-sm-6"> 
+    
+    
+    <i class="fa fa-ambulance" style="font-size:48px;color:red"></i>
+    <p><b>Name:{{$ou->name}}</b></p>
+    <p><b>Address:{{$ou->address}}</b></p>
+    <p><b>Phone:{{$ou->phone}}</b></p>
+    <a class="btn btn-primary" href="tel:{{$ou->phone}}">Call</a>
 
- 
-  <div>
-      <img style="width:100%; height:500px;"  src="https://www.dhakaambulance.com.bd/public/assets/img/home3.png" alt="">
-  </div>
-  <div class="mx-auto" align="center">
-  <h1>Ambulance Service</h1>
-  </div>
-  <div class="mx-auto" style="padding:10px;" align="center">
-<a class="btn btn-light btn-block" href="{{url('ourhospital')}}"><b>OUR HOSPITAL</b></a>
-  </div>
-  <div class="mx-auto" style="padding:10px;" align="center">
-<a class="btn btn-info btn-block" href="{{url('dhaka')}}"><b>DHAKA</b></a>
-<a  class="btn btn-dark btn-block" href="{{url('cha')}}"><b>CHITTAGONG</b></a>
+    </div>
+    @endforeach
 </div>
-<div class="mx-auto" style="padding:10px;" align="center">
-<a class="btn btn-secondary btn-block" href="{{url('sylhet')}}"><b>SYLHET</b></a>
-<a class="btn btn-primary btn-block" href="{{url('mymens')}}"><b>MYMENSINGH</b></a>
 </div>
-<div class="mx-auto" style="padding:10px;" align="center">
-<a class="btn btn-danger btn-block" href="{{url('rang')}}"><b>RANGPUR</b></a>
-<a class="btn btn-primary btn-block" href="{{url('rajshahi')}}"><b>RAJSHAHI</b></a>
-</div>
-<div class="mx-auto" style="padding:10px;" align="center">
-<a class="btn btn-warning btn-block" href="{{url('khulna')}}"><b>KHULNA</b></a>
-<a class="btn btn-secondary btn-block" href="{{url('barishal')}}"><b>BARISHAL</b></a>
-</div>
- <!--map-->
- <div  style="width:100%; height:100%;">
- <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236206.4779141557!2d91.67977725733253!3d22.326191787611783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd8a64095dfd3%3A0x5015cc5bcb6905d9!2sChattogram!5e0!3m2!1sen!2sbd!4v1642530129447!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-</div>
- 
-
-
-  <!--map-->
-
+<span align="center">
+  {{$our->links()}}
+</span>
+<style>
+  .w-5{
+    display:none;
+  }
+</style>
 
   <footer class="page-footer">
     <div class="container">
@@ -209,7 +199,6 @@
       <p id="copyright">Copyright &copy; 2021 <a href="https://www.facebook.com/mithun.sutradhar.399041/" target="_blank">Mithun Sutradhar</a>. All right reserved</p>
     </div>
   </footer>
- 
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
 
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
