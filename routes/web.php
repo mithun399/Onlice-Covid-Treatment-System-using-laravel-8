@@ -163,6 +163,13 @@ Route::get('/delete_bank/{id}',[AdminController::class,'deleteBank']);
 Route::get('/update_bank/{id}',[AdminController::class,'updateBank']);
 Route::post('/editbank/{id}',[AdminController::class,'editBank']);
 
+Route::get('/addplasma_donor',[AdminController::class,'plasmaDonor']);
+Route::post('/uploadplasma_donor',[AdminController::class,'uploadplasmaDonor']);
+Route::get('/plasmadonor_list',[AdminController::class,'plasmadonorList']);
+Route::get('/deleteplasma_donors/{id}',[AdminController::class,'deleteplasmaDonors']);
+Route::get('/updateplasma_donors/{id}',[AdminController::class,'updateplasmaDonors']);
+Route::post('/editplasmadonor/{id}',[AdminController::class,'editplasmaDonors']);
+
 Route::get('/add_org',[AdminController::class,'addOrg']);
 Route::post('/upload_org',[AdminController::class,'uploadOrg']);
 Route::get('/orglist',[AdminController::class,'orgList']);

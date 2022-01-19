@@ -18,6 +18,8 @@ use App\Models\Khulna;
 use App\Models\Barishal;
 use App\Models\Donor;
 use App\Models\Bank;
+use App\Models\Plasma;
+
 use App\Models\Organisation;
 
 
@@ -529,6 +531,44 @@ class AdminController extends Controller
         $bank->save();
         return redirect()->back();
     }
+    function plasmaDonor(){
+        return view('admin.addplasma_donor');
+    }
+    function uploadplasmaDonor(Request $req){
+        $donor=new Plasma;
+        $donor->name=$req->name;
+        $donor->blood=$req->blood;
+        $donor->address=$req->address;
+        $donor->phone=$req->phone;
+        $donor->save();
+        return redirect()->back()->with('message','Donor Added Successfully');
+        
+    }
+    function plasmadonorList(){
+        $donors=Plasma::all();
+     return view('admin.plasmadonor_list',compact('donors'));
+    }
+    function deleteplasmaDonors($id){
+        $donors= Plasma::find($id);
+        $donors->delete();
+        return redirect()->back();
+    }
+    function updateplasmaDonors($id){
+        $donors=Plasma::find($id);
+        return view('admin.updateplasma_donors',compact('donors'));
+      
+    }
+    function editplasmaDonors(Request $req,$id){
+        $donors=Plasma::find($id);
+        $donors->name=$req->name;
+        $donors->blood=$req->blood;
+        $donors->address=$req->address;
+        $donors->phone=$req->phone;
+        $donors->save();
+        return redirect()->back();
+    }
+
+
     function addOrg(){
         return view('admin.add_org');
     }

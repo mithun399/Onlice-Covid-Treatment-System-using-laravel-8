@@ -104,6 +104,10 @@
                <li><a class="dropdown-item" href="{{url('blood_list')}}">Blood Bank List</a></li>
                <li><a class="dropdown-item" href="{{url('add_donor')}}">Add Donor</a></li>
                <li><a class="dropdown-item" href="{{url('donor_list')}}">Donor List</a></li>
+               <li><a class="dropdown-item" href="{{url('addplasma_donor')}}">Add Plasma Donor</a></li>
+               <li><a class="dropdown-item" href="{{url('plasmadonor_list')}}">Plasma Donor List</a></li>
+
+
     
              </ul>
           </div>

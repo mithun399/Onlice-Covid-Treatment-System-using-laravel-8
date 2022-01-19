@@ -137,7 +137,14 @@
    @endforeach
   </div>
 </div>
-
+<div>
+  {{$donor->links()}}
+</div>
+<style>
+  .w-5{
+    display:none;
+  }
+</style>
   <footer class="page-footer">
     <div class="container">
       <div class="row px-md-3">
@@ -186,7 +193,7 @@
 
       <hr>
 
-      <p id="copyright">Copyright &copy; 2021 <a href="https://www.facebook.com/mithun.sutradhar.399041/" target="_blank">Mithun Sutradhar</a>. All right reserved</p>
+      <p id="copyright">Copyright &copy; 2022 <a href="https://www.facebook.com/mithun.sutradhar.399041/" target="_blank">Mithun Sutradhar</a>. All right reserved</p>
     </div>
   </footer>
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
