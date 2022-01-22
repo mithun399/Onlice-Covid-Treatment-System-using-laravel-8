@@ -179,6 +179,8 @@ Route::get('/delete_org/{id}',[AdminController::class,'deleteOrg']);
 Route::get('/update_org/{id}',[AdminController::class,'updateOrg']);
 Route::post('/editorg/{id}',[AdminController::class,'editOrg']);
 
+Route::get('/add_oxygen',[AdminController::class,'addOxygen']);
+Route::post('/upload_oxygen',[AdminController::class,'uploadOxygen']);
 
 
 

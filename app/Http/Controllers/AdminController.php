@@ -21,6 +21,7 @@ use App\Models\Donor;
 use App\Models\Bank;
 use App\Models\Plasma;
 use App\Models\Organisation;
+use App\Models\Oxygen;
 
 
 
@@ -640,5 +641,18 @@ class AdminController extends Controller
         $org->webaddress=$req->webaddress;
         $org->save();
         return redirect('orglist');
+    }
+    function addOxygen(){
+        return view('admin.add_oxygen');
+    }
+    function uploadOxygen(Request $req){
+        $oxygen=new Oxygen;
+        $oxygen->name=$req->name;
+        $oxygen->types=$req->types;
+        $oxygen->address=$req->address;
+        $oxygen->phone=$req->phone;
+        $oxygen->source=$req->source;
+        $oxygen->save();
+        return redirect()->back()->with('message','Oxygen Added Successfully');
     }
 }
