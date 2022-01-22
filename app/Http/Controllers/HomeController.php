@@ -26,6 +26,7 @@ use App\Models\Plasma;
 use App\Models\Bank;
 use App\Models\Sample;
 use App\Models\Organisation;
+use App\Models\Oxygen;
 use Session;
 
 
@@ -311,5 +312,9 @@ class HomeController extends Controller
     $doctor=Doctor::all();
        return view('user.consult',compact('doctor'));
    }
+   function oxygen(){
+    $oxygen=Oxygen::paginate(10);
+    return view('user.oxygen',compact('oxygen'));
+}
 }
 
