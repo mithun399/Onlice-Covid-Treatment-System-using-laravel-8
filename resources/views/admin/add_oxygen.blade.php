@@ -33,7 +33,7 @@
     @csrf
   <div class="form-group">
    <label>Name</label>
-    <input type="text" name="name" class="form-control"   placeholder="Enter Donor Name">
+    <input type="text" name="name" class="form-control"   placeholder="Enter  Name">
   </div>
   <div class="form-group">
   <label>Types</label>

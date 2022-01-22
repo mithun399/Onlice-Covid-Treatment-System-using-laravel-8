@@ -655,4 +655,27 @@ class AdminController extends Controller
         $oxygen->save();
         return redirect()->back()->with('message','Oxygen Added Successfully');
     }
+    function oxygenList(){
+        $oxygen=Oxygen::all();
+        return view('admin.oxygenlist',compact('oxygen'));
+    }
+    function deleteOxygen($id){
+        $oxygen=Oxygen::find($id);
+        $oxygen->delete();
+        return redirect()->back();
+    }
+    function updateOxygen($id){
+        $oxygen=Oxygen::find($id);
+        return view('admin.update_oxygen',compact('oxygen'));
+    }
+    function editOxygen(Request $req,$id){
+        $oxygen=Oxygen::find($id);
+        $oxygen->name=$req->name;
+        $oxygen->types=$req->types;
+        $oxygen->address=$req->address;
+        $oxygen->phone=$req->phone;
+        $oxygen->source=$req->source;
+        $oxygen->save();
+        return redirect('oxygenlist');
+    }
 }

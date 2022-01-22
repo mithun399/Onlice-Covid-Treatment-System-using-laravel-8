@@ -181,7 +181,10 @@ Route::post('/editorg/{id}',[AdminController::class,'editOrg']);
 
 Route::get('/add_oxygen',[AdminController::class,'addOxygen']);
 Route::post('/upload_oxygen',[AdminController::class,'uploadOxygen']);
-
+Route::get('/oxygenlist',[AdminController::class,'oxygenList']);
+Route::get('/delete_oxygen/{id}',[AdminController::class,'deleteOxygen']);
+Route::get('/update_oxygen/{id}',[AdminController::class,'updateOxygen']);
+Route::post('/editoxygen/{id}',[AdminController::class,'editOxygen']);
 
 
 
