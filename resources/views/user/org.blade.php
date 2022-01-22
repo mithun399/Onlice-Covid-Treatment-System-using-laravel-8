@@ -138,14 +138,18 @@
       <p><b>Phone:{{$or->phone}}</b></p>
       <p><b>Web Address:{{$or->webaddress}}</b></p>
      <a class="btn btn-primary" href="tel:{{$or->phone}}">Call</a>
-
-
     </div>
   @endforeach
   </div>
 </div>
-
-
+<span align="center">
+  {{$org->links()}}
+</span>
+<style>
+  .w-5{
+    display:none;
+  }
+</style>
 
   <footer class="page-footer">
     <div class="container">

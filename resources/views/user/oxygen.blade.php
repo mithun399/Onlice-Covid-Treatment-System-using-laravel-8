@@ -140,14 +140,20 @@
       <p><b>Phone:{{$oxy->phone}}</b></p>
       <p><b>Source:{{$oxy->source}}</b></p>
      <a class="btn btn-primary" href="tel:{{$oxy->phone}}">Call</a>
-
+<br><br>
 
     </div>
   @endforeach
   </div>
 </div>
-
-
+<span align="center">
+  {{$oxygen->links()}}
+</span>
+<style>
+  .w-5{
+    display:none;
+  }
+  </style>
 
   <footer class="page-footer">
     <div class="container">
