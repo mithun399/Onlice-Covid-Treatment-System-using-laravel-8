@@ -215,3 +215,9 @@ Route::get('/showdoctor',[DoctorController::class,'showdoctor']);
 
 
 
+Route::get('/add_appointment',[DoctorController::class,'addAppointment']);
+Route::post('/upload_appointment',[DoctorController::class,'uploadAppoint']);
+Route::get('/update/{id}',[DoctorController::class,'update']);
+Route::post('/edit/{id}',[DoctorController::class,'edit']);
+
+

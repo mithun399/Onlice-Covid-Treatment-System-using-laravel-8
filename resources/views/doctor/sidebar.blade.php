@@ -17,7 +17,12 @@
                 <span>Add Doctors</span>
               </a>
             </li>-->
-
+            <li>
+              <a href="{{url('add_appointment')}}" class="nav-link px-3 active">
+                <span class="me-2"><i class="mdi mdi-file-document-box"></i></span>
+                <span>Add Appointment</span>
+              </a>
+            </li>
             <li>
               <a href="{{url('showappointment')}}" class="nav-link px-3 active">
                 <span class="me-2"><i class="mdi mdi-file-document-box"></i></span>

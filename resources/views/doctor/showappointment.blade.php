@@ -18,7 +18,7 @@
           </div>
         </div>
         <div align="center" style="padding-top:50px;">
-            <table>
+            <table class="table table-bordered table-hover">
                 <tr style="background-color:black;">
                     <th style="padding:10px;font-size: 20px;color:white">Patient Name</th>
                     <th style="padding:10px;font-size: 20px;color:white">Email</th>
@@ -31,6 +31,7 @@
 
                     <th style="padding:10px;font-size: 20px;color:white">Approved</th>
                     <th style="padding:10px;font-size: 20px;color:white">Cancel</th>
+                    <th style="padding:10px;font-size: 20px;color:white">Edit</th>
 
 
                 </tr>
@@ -47,6 +48,9 @@
 
                     <td><a class="btn btn-success" href="{{url('approved',$show->id)}}">Approved</a></td>
                     <td><a class="btn btn-danger" href="{{url('canceled',$show->id)}}">Canceled</a></td>
+                    <td><a class="btn btn-primary" href="{{url('update',$show->id)}}">Edit</a></td>
+                    
+
                     
 
                 </tr>  

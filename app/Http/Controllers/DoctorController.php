@@ -59,6 +59,33 @@ class DoctorController extends Controller
         return redirect()->back();
 
     }
-
+ function addAppointment(){
+     
+     return view('doctor.add_appointment');
+ }
+ function uploadAppoint(Request $req){
+     $appointment=new Appointment;
+     $appointment->name=$req->name;
+     $appointment->email=$req->email;
+     $appointment->date=$req->date;
+     $appointment->time=$req->time;
+     $appointment->phone=$req->phone;
+     $appointment->message=$req->message;
+     $appointment->save();
+     return redirect()->back();
+ }
+ public function update($id)
+ {
+     $data= Appointment::find($id);
+     return view('doctor.update',compact('data'));
+ }
+ function edit(Request $req,$id){
+    $appointment=Appointment::find($id);
+   
+    $appointment->time=$req->time;
+   
+    $appointment->save();
+    return redirect('showappointment');
+}
     
 }
