@@ -22,6 +22,7 @@ use App\Models\Bank;
 use App\Models\Plasma;
 use App\Models\Organisation;
 use App\Models\Oxygen;
+use App\Models\Helpline;
 
 
 
@@ -677,5 +678,16 @@ class AdminController extends Controller
         $oxygen->source=$req->source;
         $oxygen->save();
         return redirect('oxygenlist');
+    }
+    function addHelpline(){
+        return view('admin.add_helpline');
+    }
+    function uploadHelp(Request $req){
+        $help=new Helpline;
+        $help->number=$req->number;
+        $help->for_help=$req->for_help;
+        $help->save();
+        return redirect()->back()->with('message','Add helpline Successfully');
+
     }
 }

@@ -189,6 +189,8 @@ Route::get('/delete_oxygen/{id}',[AdminController::class,'deleteOxygen']);
 Route::get('/update_oxygen/{id}',[AdminController::class,'updateOxygen']);
 Route::post('/editoxygen/{id}',[AdminController::class,'editOxygen']);
 
+Route::get('/add_helpline',[AdminController::class,'addHelpline']);
+Route::post('/upload_help',[AdminController::class,'uploadHelp']);
 
 
 
