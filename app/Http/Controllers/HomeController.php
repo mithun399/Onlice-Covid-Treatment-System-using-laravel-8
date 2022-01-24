@@ -191,6 +191,10 @@ class HomeController extends Controller
                 $order->payment_method=$req->payment;
                 $order->payment_status="pending";
                 $order->address=$req->address;
+                $order->bkash=$req->bkash;
+                $order->transaction_id=$req->transaction_id;
+
+
                 $order->save();
                 Cart::where('user_id',$userId)->delete();
              }
@@ -315,6 +319,10 @@ class HomeController extends Controller
    function oxygen(){
     $oxygen=Oxygen::paginate(10);
     return view('user.oxygen',compact('oxygen'));
-}
-}
+    }
+    function icu(){
+        return view('user.icu');
+    }
+
+    }
 

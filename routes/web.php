@@ -66,6 +66,7 @@ Route::post('/upload_sample',[HomeController::class,'uploadSample']);
 Route::get('/org',[HomeController::class,'org']);
 Route::get('/oxygen',[HomeController::class,'oxygen']);
 
+Route::get('/icu',[HomeController::class,'icu']);
 
 
 

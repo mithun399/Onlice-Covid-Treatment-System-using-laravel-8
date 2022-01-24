@@ -86,6 +86,7 @@
     <a class="dropdown-item" href="{{url('pharmacy')}}">Pharmacy</a>
     <a class="dropdown-item" href="{{url('blood')}}">Blood/Plasma</a>
     <a class="dropdown-item" href="{{url('oxygen')}}">Oxygen</a>
+    <a class="dropdown-item" href="{{url('icu')}}">ICU</a>
     <a class="dropdown-item" href="{{url('sample')}}">Called For Covid Sample</a>
     <a class="dropdown-item" href="{{url('org')}}">Org Helplines</a>
 

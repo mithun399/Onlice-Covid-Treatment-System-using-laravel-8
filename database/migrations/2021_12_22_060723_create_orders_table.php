@@ -21,6 +21,10 @@ class CreateOrdersTable extends Migration
             $table->string('payment_method');
             $table->string('payment_status');
             $table->string('address');
+            $table->string('bkash');
+            $table->string('transaction_id');
+
+
             $table->timestamps();
         });
     }

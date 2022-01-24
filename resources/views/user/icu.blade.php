@@ -8,7 +8,7 @@
 
   <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
-  <title>Covid Treatment System</title>
+  <title>Online Covid Treatment System</title>
 
   <link rel="stylesheet" href="../assets/css/maicons.css">
 
@@ -20,7 +20,6 @@
 
   <link rel="stylesheet" href="../assets/css/theme.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
 </head>
 <body>
 
@@ -33,9 +32,9 @@
         <div class="row">
           <div class="col-sm-8 text-sm">
             <div class="site-info">
-              <a href="#"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
+              <a href="#"><span class="mai-call text-primary"></span> +880-1647450709</a>
               <span class="divider">|</span>
-              <a href="#"><span class="mai-mail text-primary"></span> mail@example.com</a>
+              <a href="#"><span class="mai-mail text-primary"></span> msmithunovik8325@gmail.com</a>
             </div>
           </div>
           <div class="col-sm-4 text-right text-sm">
@@ -52,7 +51,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="/"><span class="text-primary">Covid</span>-Treatment System</a>
+        <a class="navbar-brand" href="#"><span class="text-primary">Covid Treatment</span> System</a>
 
         <form action="#">
           <div class="input-group input-navbar">
@@ -70,7 +69,7 @@
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link" href="/home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
@@ -83,21 +82,23 @@
   <div class="dropdown-menu">
     <a class="dropdown-item" href="{{url('doctors')}}">Doctors</a>
     <a class="dropdown-item" href="{{url('patients')}}">Patients</a>
-    <a class="dropdown-item" href="#">Ambulance</a>
+    <a class="dropdown-item" href="{{url('ambulance')}}">Ambulance</a>
     <a class="dropdown-item" href="{{url('pharmacy')}}">Pharmacy</a>
-    <a class="dropdown-item" href="#">Blood</a>
-    <a class="dropdown-item" href="#">Called For Covid Sample</a>
+    <a class="dropdown-item" href="{{url('blood')}}">Blood/Plasma</a>
+    <a class="dropdown-item" href="{{url('oxygen')}}">Oxygen</a>
+    <a class="dropdown-item" href="{{url('icu')}}">ICU</a>
+    <a class="dropdown-item" href="{{url('sample')}}">Called For Covid Sample</a>
+    <a class="dropdown-item" href="{{url('org')}}">Org Helplines</a>
+
   </div>
 </div>
             </li>
-            
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">News</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
-            <li class="nav-item">
-            <a class="nav-link" href="{{url('cartlist')}}">Cart()</a>
-            </li>
-            
             @if(Route::has('login'))
             @auth
             <li class="nav-item">
@@ -120,57 +121,17 @@
         </div> <!-- .navbar-collapse -->
       </div> <!-- .container -->
     </nav>
-   
   </header>
-  <table class="table">
-   
-    <tbody>
-      <tr>
-        <td>Amount</td>
-        <td>{{$total}} Tk</td>
-        
-      </tr>
-      <tr>
-        <td>Vat</td>
-        <td>0 Tk</td>
-        
-      </tr>
-      <tr>
-        <td>Delivery Charges</td>
-        <td>50 Tk</td>
-        
-      </tr>
-      <tr>
-        <td>Total Amount</td>
-        <td>{{$total+50}} Tk</td>
-        
-      </tr>
-    </tbody>
-  </table>
-  <div>
-  <form action="/orderplace" method="POST">
-    @csrf
-  <div class="form-group">
-   
-    <textarea name="address" class="form-control" placeholder="Enter Your Address..."></textarea>
+  <div class="card border-primary bg-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header bg-primary border-primary">TOTAL ICU</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Success card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
-  <div class="form-group" align="center">
-    <label>Payment Method</label><br>
-    <input type="radio" value="cash" name="payment"><span>Bkash <br>
-    <label>Your Bkash Number</label>
-     <span>
-    <input type="text" name="bkash" value="" size="40"  placeholder="016XXXXXXXX" /></span>
-    <label for="bkash_transaction_id">Transaction ID</label>
-    <span><input type="text" name="transaction_id" value="" size="40" placeholder="8C89ODOLMM" /></span>
-    </span><br>
-    <input type="radio" value="cash" name="payment"><span>Card</span>
-    <input type="radio" value="cash" name="payment"><span>Cash On Delivery</span>
+  <div class="card-footer bg-primary border-primary"></div>
+</div>
 
 
-  </div>
-  <button  type="submit" class="btn btn-primary">Buy Now</button>
-</form>
-  </div>
 
   <footer class="page-footer">
     <div class="container">
@@ -224,8 +185,7 @@
     </div>
   </footer>
 
-
-  <script src="../assets/js/jquery-3.5.1.min.js"></script>
+<script src="../assets/js/jquery-3.5.1.min.js"></script>
 
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 
@@ -234,5 +194,6 @@
 <script src="../assets/vendor/wow/wow.min.js"></script>
 
 <script src="../assets/js/theme.js"></script>
+  
 </body>
 </html>
