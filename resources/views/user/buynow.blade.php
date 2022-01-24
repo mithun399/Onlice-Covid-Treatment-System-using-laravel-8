@@ -156,7 +156,7 @@
   </div>
   <div class="form-group" align="center">
     <label>Payment Method</label><br>
-    <input type="radio" value="cash" name="payment"><span>Bkash <br>
+    <input type="radio" value="bkash" name="payment"><span>Bkash <br>
     <label>Your Bkash Number</label>
      <span>
     <input type="text" name="bkash" value="" size="40"  placeholder="016XXXXXXXX" /></span>

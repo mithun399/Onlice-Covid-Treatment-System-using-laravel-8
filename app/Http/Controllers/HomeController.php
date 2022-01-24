@@ -27,6 +27,7 @@ use App\Models\Bank;
 use App\Models\Sample;
 use App\Models\Organisation;
 use App\Models\Oxygen;
+use App\Models\Helpline;
 use Session;
 
 
@@ -322,6 +323,10 @@ class HomeController extends Controller
     }
     function icu(){
         return view('user.icu');
+    }
+    function helplines(){
+        $helplines=Helpline::all();
+        return view('user.helplines',compact('helplines'));
     }
 
     }

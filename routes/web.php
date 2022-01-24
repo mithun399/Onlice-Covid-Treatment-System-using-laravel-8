@@ -69,6 +69,7 @@ Route::get('/oxygen',[HomeController::class,'oxygen']);
 Route::get('/icu',[HomeController::class,'icu']);
 
 
+Route::get('/helplines',[HomeController::class,'helplines']);
 
 
 
