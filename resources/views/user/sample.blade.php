@@ -143,14 +143,16 @@
             <input type="text" name="email" class="form-control" placeholder="Email address..">
           </div>
           
-          <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
-            
-          </div>
+          
           <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
             <input type="text" name="phone" class="form-control" placeholder="Number..">
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
             <input type="date" name="date" class="form-control">
+          </div>
+          <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
+          <input type="text" name="address" class="form-control" placeholder="Address..">
+            
           </div>
           <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
             <textarea name="message" id="message" class="form-control" rows="6" placeholder="Enter message.."></textarea>

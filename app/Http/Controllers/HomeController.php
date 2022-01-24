@@ -304,6 +304,7 @@ class HomeController extends Controller
       $sample->email=$req->email;
       $sample->number=$req->phone;
       $sample->date=$req->date;
+      $sample->address=$req->address;
       $sample->message=$req->message;
       $sample->save();
       return redirect()->back()->with('message','Request Successful.We will contact you within 30 minutes...');
