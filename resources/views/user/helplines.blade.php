@@ -131,24 +131,27 @@
       
   <table class="table table-hover  ">
   <thead class="table-dark">
-    <tr>
+    <tr align="center">
       <th scope="col">NO.</th>
       <th scope="col">Number</th>
       <th scope="col">For Help</th>
+      <th scope="col">Call</th>
      
     </tr>
   </thead >
   <tbody class="bg-primary">
   @foreach($helplines as $helpline)
-    <tr>
+    <tr align="center">
       
       <td>{{$helpline->id}}</td>
       <td>{{$helpline->number}}</td>
       <td>{{$helpline->for_help}}</td>
+      <td><a class="btn btn-info" href="tel:{{$helpline->number}}">Call</a></td>
     </tr>
     @endforeach
    
   </tbody>
+
 </table>
 
 </div>

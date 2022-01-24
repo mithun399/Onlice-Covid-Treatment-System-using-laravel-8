@@ -122,15 +122,28 @@
       </div> <!-- .container -->
     </nav>
   </header>
-  <div class="card border-primary bg-dark mb-3" style="max-width: 18rem;">
-  <div class="card-header bg-primary border-primary">TOTAL ICU</div>
-  <div class="card-body text-primary">
-    <h5 class="card-title">Success card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+ 
+<div class="container">
+  <div class="row">
+    <div class="col-sm card border-primary bg-dark mb-3">
+      <div class="card-header bg-primary border-primary" align="center">TOTAL ICU</div>
+      <div class="card-body text-primary">
+    
+      <h1 class="card-text" align="center">{{$total}}</h1>
   </div>
   <div class="card-footer bg-primary border-primary"></div>
+    </div>
+    <div class="col-sm card border-primary bg-dark mb-3">
+    <div class="card-header bg-primary border-primary" align="center">AVAILABLE ICU</div>
+      <div class="card-body text-primary">
+    
+      <h1 class="card-text" align="center">{{$total-1}}</h1>
+  </div>
+  <div class="card-footer bg-primary border-primary"></div>
+    </div>
+    
+  </div>
 </div>
-
 
 
   <footer class="page-footer">

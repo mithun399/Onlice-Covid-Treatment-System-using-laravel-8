@@ -323,7 +323,8 @@ class HomeController extends Controller
     return view('user.oxygen',compact('oxygen'));
     }
     function icu(){
-        return view('user.icu');
+        $total=70;
+        return view('user.icu',compact('total'));
     }
     function helplines(){
         $helplines=Helpline::all();
