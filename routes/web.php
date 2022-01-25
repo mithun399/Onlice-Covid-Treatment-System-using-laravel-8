@@ -71,6 +71,7 @@ Route::get('/icu',[HomeController::class,'icu']);
 
 Route::get('/helplines',[HomeController::class,'helplines']);
 
+Route::post('/icuform',[HomeController::class,'icuform']);
 
 
 

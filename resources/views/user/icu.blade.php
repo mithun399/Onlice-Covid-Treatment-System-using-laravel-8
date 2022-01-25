@@ -122,10 +122,18 @@
       </div> <!-- .container -->
     </nav>
   </header>
+  <div align="center"  style="padding-top:20px; font-size:30px;">
+        @if(session()->has('message'))
+          <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">X</button>
+          {{session()->get('message')}}
+          </div>
+
+        @endif
  
-<div class="container">
+<div class="container" style="padding:20px;">
   <div class="row">
-    <div class="col-sm card border-primary bg-dark mb-3">
+    <div class="col-sm card border-primary bg-dark mb-3" style="padding:20px;">
       <div class="card-header bg-primary border-primary" align="center">TOTAL ICU</div>
       <div class="card-body text-primary">
     
@@ -133,7 +141,7 @@
   </div>
   <div class="card-footer bg-primary border-primary"></div>
     </div>
-    <div class="col-sm card border-primary bg-dark mb-3">
+    <div class="col-sm card border-primary bg-dark mb-3" style="padding:20px;">
     <div class="card-header bg-primary border-primary" align="center">AVAILABLE ICU</div>
       <div class="card-body text-primary">
     
@@ -144,7 +152,42 @@
     
   </div>
 </div>
+<!--form-->
+<div class="page-section">
+    <div class="container">
+      <h1 class="text-center wow fadeInUp">ICU BOOKING</h1>
 
+      <form class="main-form" method="POST" action="{{url('icuform')}}">
+        @csrf
+        <div class="row mt-5 ">
+          <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
+            <input type="text" name="name" class="form-control" placeholder="Full name">
+          </div>
+          <div class="col-12 col-sm-6 py-2 wow fadeInRight">
+            <input type="text" name="reference" class="form-control" placeholder="Enter Dr. Reference">
+          </div>
+          <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
+            <input type="date" name="date" class="form-control">
+          </div>
+          <div class="col-12 col-sm-6 py-2 wow fadeInRight">
+            <input type="text" name="address" class="form-control" placeholder="Enter Address">
+          </div>
+          <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
+            
+          </div>
+          <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
+            <input type="text" name="phone" class="form-control" placeholder="Number..">
+          </div>
+          <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
+            <textarea name="message" id="message" class="form-control" rows="6" placeholder="Enter message.."></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3 wow zoomIn">Submit Request</button>
+      </form>
+    </div>
+  </div> 
+<!--form-->
 
   <footer class="page-footer">
     <div class="container">

@@ -28,6 +28,7 @@ use App\Models\Sample;
 use App\Models\Organisation;
 use App\Models\Oxygen;
 use App\Models\Helpline;
+use App\Models\Icu;
 use Session;
 
 
@@ -323,12 +324,24 @@ class HomeController extends Controller
     return view('user.oxygen',compact('oxygen'));
     }
     function icu(){
-        $total=70;
+        $total=10;
         return view('user.icu',compact('total'));
     }
     function helplines(){
         $helplines=Helpline::all();
         return view('user.helplines',compact('helplines'));
+    }
+    function icuform(Request $req){
+        $icu=new Icu;
+        $icu->name=$req->name;
+        $icu->reference=$req->reference;
+        $icu->date=$req->date;
+        $icu->address=$req->address;
+        $icu->phone=$req->phone;
+        $icu->message=$req->message;
+        $icu->save();
+        return redirect()->back()->with('message','Request Successfull,We will contact with you within 10 minutes');
+        
     }
 
     }
