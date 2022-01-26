@@ -324,7 +324,8 @@ class HomeController extends Controller
     return view('user.oxygen',compact('oxygen'));
     }
     function icu(){
-        $total=10;
+        $total=DB::table('icus')->count();
+        
         return view('user.icu',compact('total'));
     }
     function helplines(){

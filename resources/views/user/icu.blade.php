@@ -122,7 +122,7 @@
       </div> <!-- .container -->
     </nav>
   </header>
-  <div align="center"  style="padding-top:20px; font-size:30px;">
+  
         @if(session()->has('message'))
           <div class="alert alert-success">
             <button type="button" class="close" data-dismiss="alert">X</button>
@@ -137,7 +137,7 @@
       <div class="card-header bg-primary border-primary" align="center">TOTAL ICU</div>
       <div class="card-body text-primary">
     
-      <h1 class="card-text" align="center">{{$total}}</h1>
+      <h1 class="card-text" align="center">{{$t=10}}</h1>
   </div>
   <div class="card-footer bg-primary border-primary"></div>
     </div>
@@ -145,7 +145,7 @@
     <div class="card-header bg-primary border-primary" align="center">AVAILABLE ICU</div>
       <div class="card-body text-primary">
     
-      <h1 class="card-text" align="center">{{$total-1}}</h1>
+      <h1 class="card-text" align="center">{{$t-$total}}</h1>
   </div>
   <div class="card-footer bg-primary border-primary"></div>
     </div>
