@@ -76,6 +76,7 @@ Route::post('/icuform',[HomeController::class,'icuform']);
 
 Route::get('/payment',[HomeController::class,'payment']);
 
+Route::post('/upload_payment',[HomeController::class,'uploadPayment']);
 
 
 

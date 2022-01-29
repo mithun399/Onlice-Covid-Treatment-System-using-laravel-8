@@ -29,6 +29,7 @@ use App\Models\Organisation;
 use App\Models\Oxygen;
 use App\Models\Helpline;
 use App\Models\Icu;
+use App\Models\Payment;
 use Session;
 
 
@@ -346,6 +347,15 @@ class HomeController extends Controller
     }
     function payment(){
         return view('user.payment');
+    }
+    function uploadPayment(Request $req){
+        $payment=new Payment;
+        $payment->bkash=$req->bkash;
+        $payment->amount=$req->amount;
+        $payment->trxID=$req->trxID;
+        $payment->save();
+        return redirect()->back()->with('message','Payment Successfull');
+
     }
 
     }

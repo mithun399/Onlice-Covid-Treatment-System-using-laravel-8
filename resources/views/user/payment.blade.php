@@ -125,7 +125,13 @@
     </nav>
   </header>
 
+  @if(session()->has('message'))
+          <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+          {{session()->get('message')}}
+          </div>
 
+        @endif
 
 
 <div class="container" style="padding:20px;">
@@ -133,15 +139,21 @@
     <div class="col-sm card border-primary bg-dark mb-3" style="padding:20px;">
       <div class="card-header bg-primary border-primary" align="center">Bkash Payment</div>
       <div class="card-body text-primary">
-      <form>
+      <form action="{{url('upload_payment')}}" method="POST">
+          @csrf
   <div class="form-group">
     <label>Bkash Number</label>
-    <input type="text" class="form-control"  placeholder="0164XXXXXXXX">
+    <input type="text" name="bkash" class="form-control"  placeholder="0164XXXXXXXX">
     
+  </div>
+  
+  <div class="form-group">
+    <label>Amount</label>
+    <input type="text" name="amount" class="form-control"  placeholder="Amount..">
   </div>
   <div class="form-group">
     <label>Transaction ID</label>
-    <input type="text" class="form-control"  placeholder="8C89ODOLMM">
+    <input type="text" name="trxID" class="form-control"  placeholder="8C89ODOLMM">
   </div>
   
   <button type="submit" class="btn btn-primary">Submit</button>
