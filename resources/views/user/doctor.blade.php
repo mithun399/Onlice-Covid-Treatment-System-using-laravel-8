@@ -1,9 +1,11 @@
+
 <div class="page-section">
     <div class="container">
       <h1 class="text-center mb-5 wow fadeInUp">Our Doctors</h1>
-
+      
       <div class="owl-carousel wow fadeInUp" id="doctorSlideshow">
        @foreach($doctor as $doctors)
+       
       <div class="item">
           <div class="card-doctor">
             <div class="header">
@@ -16,13 +18,16 @@
             <div class="body">
               <p class="text-xl mb-0">{{$doctors->name}}</p>
               <p class="text-xl mb-0">Available:{{$doctors->time}}</p>
-              <p class="text-xl mb-0">Fees:{{$doctors->fee}}</p>
               <span class="text-sm text-grey">{{$doctors->speciality}}</span>
+              <p class="text-xl mb-0"> <a href="{{url('payment')}}"> Fees:{{$doctors->fee}}</a></p>
+              
             </div>
           </div>
         </div>
+        
 @endforeach
-      
+
       </div>
     </div>
   </div>
+  

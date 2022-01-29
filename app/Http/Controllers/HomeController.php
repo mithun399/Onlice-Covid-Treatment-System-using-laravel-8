@@ -344,6 +344,9 @@ class HomeController extends Controller
         return redirect()->back()->with('message','Request Successfull,We will contact with you within 10 minutes');
         
     }
+    function payment(){
+        return view('user.payment');
+    }
 
     }
 

@@ -51,7 +51,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="/"><span class="text-primary">Covid Treatment</span> System</a>
+        <a class="navbar-brand" href="#"><span class="text-primary">Covid Treatment</span> System</a>
 
         <form action="#">
           <div class="input-group input-navbar">
@@ -69,7 +69,7 @@
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link" href="/home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
@@ -84,8 +84,14 @@
     <a class="dropdown-item" href="{{url('patients')}}">Patients</a>
     <a class="dropdown-item" href="{{url('ambulance')}}">Ambulance</a>
     <a class="dropdown-item" href="{{url('pharmacy')}}">Pharmacy</a>
-    <a class="dropdown-item" href="{{url('blood')}}">Blood</a>
-    <a class="dropdown-item" href="#">Called For Covid Sample</a>
+    <a class="dropdown-item" href="{{url('blood')}}">Blood/Plasma</a>
+    <a class="dropdown-item" href="{{url('oxygen')}}">Oxygen</a>
+    <a class="dropdown-item" href="{{url('icu')}}">ICU</a>
+    <a class="dropdown-item" href="{{url('sample')}}">Called For Covid Sample</a>
+    <a class="dropdown-item" href="{{url('org')}}">Org Helplines</a>
+    <a class="dropdown-item" href="{{url('helplines')}}">Emergency Helplines</a>
+
+
   </div>
 </div>
             </li>
@@ -118,29 +124,34 @@
       </div> <!-- .container -->
     </nav>
   </header>
-  <a href="/blood">Go Back</a>
-  <div class="text-center ">
-<h1>BlOOD BANK LIST</h1>
-  </div>
-  <div class="container">
+
+
+
+
+<div class="container" style="padding:20px;">
   <div class="row">
-      @foreach($bank as $banks)
- 
-    <div class="col-sm-3 text-center  " style="color:;">
-    <img style="height:70px;width:70px;" src="https://previews.123rf.com/images/archivector/archivector1902/archivector190200192/117306723-donor-blood-icon-symbol-of-red-blood-drops-in-circumference-flat-vector-illustration-for-web-design.jpg" alt="">
-      <p><b>Name:{{$banks->name}}</b></p>
-     
-      <p><b>Address:{{$banks->address}}</b></p>
-      <p><b>Phone:{{$banks->phone}}</b></p>
-     <a class="btn btn-primary" href="tel:{{$banks->phone}}">Call</a>
-
-
-    </div>
-  @endforeach
+    <div class="col-sm card border-primary bg-dark mb-3" style="padding:20px;">
+      <div class="card-header bg-primary border-primary" align="center">Bkash Payment</div>
+      <div class="card-body text-primary">
+      <form>
+  <div class="form-group">
+    <label>Bkash Number</label>
+    <input type="text" class="form-control"  placeholder="0164XXXXXXXX">
+    
   </div>
+  <div class="form-group">
+    <label>Transaction ID</label>
+    <input type="text" class="form-control"  placeholder="8C89ODOLMM">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+      
+  </div>
+  <div class="card-footer bg-primary border-primary"></div>
+    </div>
 </div>
-
-
+</div>
 
   <footer class="page-footer">
     <div class="container">
@@ -190,7 +201,7 @@
 
       <hr>
 
-      <p id="copyright">Copyright &copy; 2021 <a href="https://www.facebook.com/mithun.sutradhar.399041/" target="_blank">Mithun Sutradhar</a>. All right reserved</p>
+      <p id="copyright">Copyright &copy; 2022 <a href="https://www.facebook.com/mithun.sutradhar.399041/" target="_blank">Mithun Sutradhar</a>. All right reserved</p>
     </div>
   </footer>
 

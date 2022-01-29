@@ -17,7 +17,7 @@
             <h4>Dashboard</h4>
           </div>
         </div>
-        <div align="center"  style="padding-top:20px; font-size:30px;">
+        
         @if(session()->has('message'))
           <div class="alert alert-success">
             <button type="button" class="close" data-dismiss="alert"></button>
