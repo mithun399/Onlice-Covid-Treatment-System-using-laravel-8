@@ -79,6 +79,7 @@ Route::get('/payment',[HomeController::class,'payment']);
 Route::post('/upload_payment',[HomeController::class,'uploadPayment']);
 
 
+Route::get('/search',[HomeController::class,'search']);
 
 
 

@@ -53,12 +53,12 @@
       <div class="container">
         <a class="navbar-brand" href="#"><span class="text-primary">Covid Treatment</span> System</a>
 
-        <form action="#">
+        <form action="/search">
           <div class="input-group input-navbar">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
+              <button class="btn btn-primary"><span class="mai-search"></span></button>
             </div>
-            <input type="text" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
+            <input type="text"  name="query" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
           </div>
         </form>
 

@@ -357,6 +357,12 @@ class HomeController extends Controller
         return redirect()->back()->with('message','Payment Successfull');
 
     }
+    function search(Request $req){
+        
+       return $data=Doctor::
+       where('name','like','%'.$req->input('query').'%')
+       ->get();
+    }
 
     }
 
