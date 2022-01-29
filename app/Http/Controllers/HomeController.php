@@ -30,6 +30,7 @@ use App\Models\Oxygen;
 use App\Models\Helpline;
 use App\Models\Icu;
 use App\Models\Payment;
+
 use Session;
 
 
@@ -359,9 +360,12 @@ class HomeController extends Controller
     }
     function search(Request $req){
         
-       return $data=Doctor::
+        $doctor=Doctor::
        where('name','like','%'.$req->input('query').'%')
        ->get();
+      
+       return view('user.search',compact('doctor'));
+       
     }
 
     }
