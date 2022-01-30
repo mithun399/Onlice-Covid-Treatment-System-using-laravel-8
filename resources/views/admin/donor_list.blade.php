@@ -39,7 +39,7 @@
                     <td style="padding:10px;font-size: 20px;color:black">{{$dono->phone}}</td>
 
                     <td><a class="btn btn-danger" onclick="return confirm('Are You Sure to Delte This?')" href="{{url('delete_donors',$dono->id)}}">Delete</a></td>
-                    <td><a class="btn btn-primary" href="{{url('update_donors',$dono->id)}}">Update</a></td>
+                    <td><a class="btn btn-primary" href="{{url('update_donors',$dono->id)}}">Edit</a></td>
                 </tr>
                 @endforeach
 </table>

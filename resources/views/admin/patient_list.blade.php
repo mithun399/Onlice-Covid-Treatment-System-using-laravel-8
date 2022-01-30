@@ -43,7 +43,7 @@
                     <td style="padding:10px;font-size: 20px;color:black">{{$patient->address}}</td>
 
                     <td><a class="btn btn-danger" onclick="return confirm('Are You Sure to Delte This?')" href="{{url('deletepatient',$patient->id)}}">Delete</a></td>
-                    <td><a class="btn btn-primary" href="{{url('updatepatient',$patient->id)}}">Update</a></td>
+                    <td><a class="btn btn-primary" href="{{url('updatepatient',$patient->id)}}">Edit</a></td>
                 </tr>
                 @endforeach
 </table>
