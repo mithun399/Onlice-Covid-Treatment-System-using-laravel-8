@@ -51,14 +51,14 @@
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="#"><span class="text-primary">Covid Treatment</span> System</a>
+        <a class="navbar-brand" href="/"><span class="text-primary">Covid Treatment</span> System</a>
 
-        <form action="#">
+        <form action="/search" method="GET">
           <div class="input-group input-navbar">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
+              <button class="btn btn-primary"><span class="mai-search"></span></button>
             </div>
-            <input type="text" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
+            <input type="text"  name="query" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
           </div>
         </form>
 
@@ -69,7 +69,7 @@
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/home">Home</a>
+              <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
@@ -84,9 +84,13 @@
     <a class="dropdown-item" href="{{url('patients')}}">Patients</a>
     <a class="dropdown-item" href="{{url('ambulance')}}">Ambulance</a>
     <a class="dropdown-item" href="{{url('pharmacy')}}">Pharmacy</a>
-    <a class="dropdown-item" href="{{url('blood')}}">Blood</a>
+    <a class="dropdown-item" href="{{url('blood')}}">Blood/Plasma</a>
+    <a class="dropdown-item" href="{{url('oxygen')}}">Oxygen</a>
+    <a class="dropdown-item" href="{{url('icu')}}">ICU</a>
     <a class="dropdown-item" href="{{url('sample')}}">Called For Covid Sample</a>
     <a class="dropdown-item" href="{{url('org')}}">Org Helplines</a>
+    <a class="dropdown-item" href="{{url('helplines')}}">Emergency Helplines</a>
+
 
   </div>
 </div>

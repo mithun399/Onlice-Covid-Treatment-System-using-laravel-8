@@ -8,7 +8,7 @@
 
   <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
-  <title>Covid Treatment System</title>
+  <title>Online Covid Treatment System</title>
 
   <link rel="stylesheet" href="../assets/css/maicons.css">
 
@@ -20,7 +20,6 @@
 
   <link rel="stylesheet" href="../assets/css/theme.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
 </head>
 <body>
 
@@ -33,9 +32,9 @@
         <div class="row">
           <div class="col-sm-8 text-sm">
             <div class="site-info">
-              <a href="#"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
+              <a href="#"><span class="mai-call text-primary"></span> +880-1647450709</a>
               <span class="divider">|</span>
-              <a href="#"><span class="mai-mail text-primary"></span> mail@example.com</a>
+              <a href="#"><span class="mai-mail text-primary"></span> msmithunovik8325@gmail.com</a>
             </div>
           </div>
           <div class="col-sm-4 text-right text-sm">
@@ -52,14 +51,14 @@
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="/"><span class="text-primary">Covid</span>-Treatment System</a>
+        <a class="navbar-brand" href="/"><span class="text-primary">Covid Treatment</span> System</a>
 
-        <form action="#">
+        <form action="/search" method="GET">
           <div class="input-group input-navbar">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
+              <button class="btn btn-primary"><span class="mai-search"></span></button>
             </div>
-            <input type="text" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
+            <input type="text"  name="query" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
           </div>
         </form>
 
@@ -83,21 +82,25 @@
   <div class="dropdown-menu">
     <a class="dropdown-item" href="{{url('doctors')}}">Doctors</a>
     <a class="dropdown-item" href="{{url('patients')}}">Patients</a>
-    <a class="dropdown-item" href="#">Ambulance</a>
+    <a class="dropdown-item" href="{{url('ambulance')}}">Ambulance</a>
     <a class="dropdown-item" href="{{url('pharmacy')}}">Pharmacy</a>
-    <a class="dropdown-item" href="#">Blood</a>
-    <a class="dropdown-item" href="#">Called For Covid Sample</a>
+    <a class="dropdown-item" href="{{url('blood')}}">Blood/Plasma</a>
+    <a class="dropdown-item" href="{{url('oxygen')}}">Oxygen</a>
+    <a class="dropdown-item" href="{{url('icu')}}">ICU</a>
+    <a class="dropdown-item" href="{{url('sample')}}">Called For Covid Sample</a>
+    <a class="dropdown-item" href="{{url('org')}}">Org Helplines</a>
+    <a class="dropdown-item" href="{{url('helplines')}}">Emergency Helplines</a>
+
+
   </div>
 </div>
             </li>
-            
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">News</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
-            <li class="nav-item">
-            <a class="nav-link" href="{{url('cartlist')}}">Cart()</a>
-            </li>
-            
             @if(Route::has('login'))
             @auth
             <li class="nav-item">
@@ -120,7 +123,6 @@
         </div> <!-- .navbar-collapse -->
       </div> <!-- .container -->
     </nav>
-   
   </header>
   <table class="table">
    

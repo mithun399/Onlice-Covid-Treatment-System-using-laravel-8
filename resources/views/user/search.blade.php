@@ -53,7 +53,7 @@
       <div class="container">
         <a class="navbar-brand" href="/"><span class="text-primary">Covid Treatment</span> System</a>
 
-        <form action="/search">
+        <form action="/search" method="GET">
           <div class="input-group input-navbar">
             <div class="input-group-prepend">
               <button class="btn btn-primary"><span class="mai-search"></span></button>

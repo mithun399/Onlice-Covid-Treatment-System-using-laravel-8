@@ -87,10 +87,16 @@ $total=HomeController::cartItem();
   <div class="dropdown-menu">
     <a class="dropdown-item" href="{{url('doctors')}}">Doctors</a>
     <a class="dropdown-item" href="{{url('patients')}}">Patients</a>
-    <a class="dropdown-item" href="#">Ambulance</a>
+    <a class="dropdown-item" href="{{url('ambulance')}}">Ambulance</a>
     <a class="dropdown-item" href="{{url('pharmacy')}}">Pharmacy</a>
-    <a class="dropdown-item" href="#">Blood</a>
-    <a class="dropdown-item" href="#">Called For Covid Sample</a>
+    <a class="dropdown-item" href="{{url('blood')}}">Blood/Plasma</a>
+    <a class="dropdown-item" href="{{url('oxygen')}}">Oxygen</a>
+    <a class="dropdown-item" href="{{url('icu')}}">ICU</a>
+    <a class="dropdown-item" href="{{url('sample')}}">Called For Covid Sample</a>
+    <a class="dropdown-item" href="{{url('org')}}">Org Helplines</a>
+    <a class="dropdown-item" href="{{url('helplines')}}">Emergency Helplines</a>
+
+
   </div>
 </div>
             </li>
