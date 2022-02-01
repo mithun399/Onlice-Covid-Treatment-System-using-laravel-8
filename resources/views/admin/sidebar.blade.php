@@ -53,6 +53,8 @@
              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                <li><a class="dropdown-item" href="{{url('add_medicine')}}">Add Medicine</a></li>
                <li><a class="dropdown-item" href="{{url('medicine_list')}}">Medicine List</a></li>
+               <li><a class="dropdown-item" href="{{url('medicinepayment')}}">Payment</a></li>
+
     
              </ul>
           </div>

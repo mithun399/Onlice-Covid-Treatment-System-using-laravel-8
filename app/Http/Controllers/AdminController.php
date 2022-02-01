@@ -25,6 +25,7 @@ use App\Models\Plasma;
 use App\Models\Organisation;
 use App\Models\Oxygen;
 use App\Models\Helpline;
+use App\Models\Order;
 use Crypt;
 
 
@@ -705,5 +706,9 @@ class AdminController extends Controller
         $admin->password=Crypt::encrypt($req->password);
         $admin->save();
         return redirect()->back()->with('message','Admin added Successfully');
+    }
+    function medicinePayment(){
+        $medicinepayment=Order::all();
+        return view('admin.medicinepayment',compact('medicinepayment'));
     }
 }

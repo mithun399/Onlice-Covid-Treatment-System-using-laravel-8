@@ -198,6 +198,7 @@ Route::post('/upload_help',[AdminController::class,'uploadHelp']);
 
 Route::get('/add_admin',[AdminController::class,'addAdmin']);
 Route::post('/upload_admin',[AdminController::class,'uploadAdmin']);
+Route::get('/medicinepayment',[AdminController::class,'medicinePayment']);
 
 
 
