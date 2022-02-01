@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Doctor;
 use App\Models\Appointment;
+use App\Models\Payment;
+
 
 class DoctorController extends Controller
 {
@@ -86,6 +88,10 @@ class DoctorController extends Controller
    
     $appointment->save();
     return redirect('showappointment');
+}
+function doctorPayment(){
+        $doctorpayment=Payment::all();
+        return view('doctor.doctorpayment',compact('doctorpayment'));
 }
     
 }

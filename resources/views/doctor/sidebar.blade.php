@@ -37,6 +37,12 @@
                 <span>All Doctors</span>
               </a>
             </li>
+            <li>
+              <a href="{{url('doctorpayment')}}" class="nav-link px-3 active">
+                <span class="me-2"><i class="mdi mdi-file-document-box"></i></span>
+                <span>Doctor Payment</span>
+              </a>
+            </li>
             
           </ul>
         </nav>

@@ -232,3 +232,4 @@ Route::get('/update/{id}',[DoctorController::class,'update']);
 Route::post('/edit/{id}',[DoctorController::class,'edit']);
 
 
+Route::get('/doctorpayment',[DoctorController::class,'doctorPayment']);
