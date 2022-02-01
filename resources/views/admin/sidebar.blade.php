@@ -11,6 +11,7 @@
                 
               </div>
             </li>
+           
             <li>
               <a href="{{url('add_doctor_view')}}" class="nav-link px-3 active">
                 <span class="me-2"><i class="mdi mdi-file-document-box"></i></span>
@@ -140,6 +141,12 @@
               <a href="{{url('add_helpline')}}" class="nav-link px-3 active">
                 <span class="me-2"><i class="mdi mdi-file-document-box"></i></span>
                 <span>Add Helpline</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{url('add_admin')}}" class="nav-link px-3 active">
+                <span class="me-2"><i class="mdi mdi-file-document-box"></i></span>
+                <span>Add Admin</span>
               </a>
             </li>
        

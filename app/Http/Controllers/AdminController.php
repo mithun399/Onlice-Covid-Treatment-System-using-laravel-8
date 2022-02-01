@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\User;
+
 use App\Models\Doctor;
 use App\Models\Appointment;
 use App\Models\Patient;
@@ -23,7 +25,7 @@ use App\Models\Plasma;
 use App\Models\Organisation;
 use App\Models\Oxygen;
 use App\Models\Helpline;
-
+use Crypt;
 
 
 class AdminController extends Controller
@@ -689,5 +691,19 @@ class AdminController extends Controller
         $help->save();
         return redirect()->back()->with('message','Add helpline Successfully');
 
+    }
+    function addAdmin(){
+        return view('admin.add_admin');
+    }
+    function uploadAdmin(Request $req){
+        $admin=new User;
+        $admin->name=$req->name;
+        $admin->email=$req->email;
+        $admin->phone=$req->phone;
+        $admin->address=$req->address;
+        $admin->usertype=$req->usertype;
+        $admin->password=Crypt::encrypt($req->password);
+        $admin->save();
+        return redirect()->back()->with('message','Admin added Successfully');
     }
 }
