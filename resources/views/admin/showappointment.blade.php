@@ -19,8 +19,7 @@
         </div>
        
         <div align="center" style="padding-top:50px;">
-       
-        
+     
             <table>
                 <tr style="background-color:black;">
                     <th style="padding:10px;font-size: 20px;color:white">Patient Name</th>

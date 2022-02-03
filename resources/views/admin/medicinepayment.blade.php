@@ -16,12 +16,12 @@
           <div class="col-md-12">
             <h4>Dashboard</h4>
           </div>
-          <div align="center" style="padding-top:50px;">
-            <b style=" font-size: 40px;">Payment View</b>
+          <div align="center" style="padding-top:10px;">
+            <b style=" font-size: 40px;">E-Pharma Payment View</b>
         </div>
-          <div align="center" style="padding-top:50px;">
+          <div align="center" style="padding-top:10px;">
         <table>
-                <tr style="background-color:black;">
+                <tr style="background-color:black;" align="center">
                     <th style="padding:10px;font-size: 20px;color:white">Product ID</th>
                     <th style="padding:10px;font-size: 20px;color:white">User ID</th>
                     <th style="padding:10px;font-size: 20px;color:white">Status</th>
@@ -45,10 +45,6 @@
                     <td style="padding:10px;font-size: 20px;color:black">{{$mpayment->bkash}}</td>
                     <td style="padding:10px;font-size: 20px;color:black">{{$mpayment->transaction_id}}</td>
 
-
-                    <td style="padding:10px;font-size: 20px;color:black"></td>
-
-                    
                 </tr>
                 @endforeach
 </table>

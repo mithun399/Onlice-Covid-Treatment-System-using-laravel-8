@@ -17,8 +17,8 @@
             <h4>Dashboard</h4>
           </div>
         </div>
-        <h1 align="center"  style="padding-top:20px; font-size:30px;"><b>Add Admin</b></h1>
-        <div class="row" align="center" style="padding-top:50px;">
+        <h1 align="center"  style="padding-top:5px; font-size:30px;"><b>Add Admin</b></h1>
+        <div class="row" align="center" style="padding-top:5px;">
         @if(session()->has('message'))
           <div class="alert alert-success">
             <button type="button" class="close" data-dismiss="alert"></button>

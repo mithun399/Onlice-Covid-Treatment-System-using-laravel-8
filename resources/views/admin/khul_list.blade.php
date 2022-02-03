@@ -21,7 +21,7 @@
         </div>
           <div align="center" style="padding-top:50px;">
         <table>
-                <tr style="background-color:black;">
+                <tr style="background-color:black;" align="center">
                     <th style="padding:10px;font-size: 20px;color:white">Name</th>
                     <th style="padding:10px;font-size: 20px;color:white">Address</th>
                     <th style="padding:10px;font-size: 20px;color:white">Phone</th>

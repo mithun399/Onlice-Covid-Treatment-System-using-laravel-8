@@ -20,7 +20,7 @@
         <div align="center" style="padding-top:20px;">
         <h1 font-size:0px;"><b>Medicine List</b></h1>
         </div>
-        <div align="center" style="padding-top:50px;">
+        <div align="center" style="padding-top:10px;">
       <table>
       <tr style="background-color:black;">
                     <th style="padding:10px;font-size: 20px;color:white">Medicine Name</th>

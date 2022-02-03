@@ -16,10 +16,10 @@
           <div class="col-md-12">
             <h4>Dashboard</h4>
           </div>
-          <div align="center" style="padding-top:50px;">
+          <div align="center" style="padding-top:10px;">
             <b style=" font-size: 40px;">OXYGEN LIST</b>
         </div>
-          <div align="center" style="padding-top:30px;">
+          <div align="center" style="padding-top:10px;">
         <table  class="table table-bordered table-hover ">
                 <tr style="background-color:black;">
                     <th style="padding:10px;font-size: 20px;color:white">Name</th>
@@ -38,7 +38,7 @@
                     <td style="padding:10px;font-size: 20px;color:black">{{$oxy->phone}}</td>
                     <td style="padding:10px;font-size: 20px;color:black">{{$oxy->source}}</td>
                     <td><a class="btn btn-danger" onclick="return confirm('Are You Sure to Delte This?')" href="{{url('delete_oxygen',$oxy->id)}}">Delete</a></td>
-                    <td><a class="btn btn-primary" href="{{url('update_oxygen',$oxy->id)}}">Update</a></td>
+                    <td><a class="btn btn-primary" href="{{url('update_oxygen',$oxy->id)}}">Edit</a></td>
                 </tr>
                 @endforeach
 </table>

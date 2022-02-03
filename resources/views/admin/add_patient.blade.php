@@ -17,7 +17,7 @@
             <h4>Dashboard</h4>
           </div>
         </div>
-       
+        <div align="center" style="padding-top:50px; font-size:20px;"><b>Add Patient</b></div>
         <div class="row" align="center" style="padding-top:50px;">
         @if(session()->has('message'))
           <div class="alert alert-success">

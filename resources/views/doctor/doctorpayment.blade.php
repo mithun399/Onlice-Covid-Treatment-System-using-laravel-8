@@ -17,7 +17,7 @@
             <h4>Dashboard</h4>
           </div>
           <div align="center" style="padding-top:50px;">
-            <b style=" font-size: 40px;">Payment View</b>
+            <b style=" font-size: 40px;">Doctor Payment View</b>
         </div>
           <div align="center" style="padding-top:50px;">
         <table>

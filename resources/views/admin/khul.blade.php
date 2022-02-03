@@ -18,7 +18,7 @@
           </div>
         </div>
 </div>
-<h1 align="center"  style="padding-top:20px; font-size:30px;"><b>Add Ambulance For Chittagong</b></h1>
+<h1 align="center"  style="padding-top:20px; font-size:30px;"><b>Add Ambulance For Khulna</b></h1>
 <div class="row" align="center" style="padding-top:50px;">
 
 @if(session()->has('message'))

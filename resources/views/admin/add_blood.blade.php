@@ -25,7 +25,7 @@
           </div>
 
         @endif
-        <h1><b>ADD BLOOD Bank</b></h1>
+        <h1 align="center"style="padding-top:30px;"><b>ADD BLOOD BANK</b></h1>
 
         </div>
         <div class="d-flex justify-content-center" style="padding-top:30px;">

@@ -17,6 +17,7 @@
             <h4>Dashboard</h4>
           </div>
         </div>
+        <div align="center" style="padding-top:50px; font-size:20px;"><b>Doctor List</b></div>
         <div align="center" style="padding-top:50px;">
         <table>
                 <tr style="background-color:black;">
@@ -44,7 +45,7 @@
                     <td style="padding:10px;font-size: 20px;color:black">{{$doctor->fee}}</td>
 
                     <td><a class="btn btn-danger" onclick="return confirm('Are You Sure to Delte This?')" href="{{url('deletedoctor',$doctor->id)}}">Delete</a></td>
-                    <td><a class="btn btn-primary" href="{{url('updatedoctor',$doctor->id)}}">Update</a></td>
+                    <td><a class="btn btn-primary" href="{{url('updatedoctor',$doctor->id)}}">Edit</a></td>
                 </tr>
                 @endforeach
 </table>

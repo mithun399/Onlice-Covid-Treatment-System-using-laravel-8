@@ -16,10 +16,10 @@
           <div class="col-md-12">
             <h4>Dashboard</h4>
           </div>
-          <div align="center" style="padding-top:50px;">
+          <div align="center" style="padding-top:10px;">
             <b style=" font-size: 40px;">Blood Bank List</b>
         </div>
-          <div align="center" style="padding-top:50px;">
+          <div align="center" style="padding-top:10px;">
         <table>
                 <tr style="background-color:black;">
                     <th style="padding:10px;font-size: 20px;color:white">Name</th>
