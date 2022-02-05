@@ -153,13 +153,12 @@
 <a class="btn btn-secondary btn-block" href="{{url('barishal')}}"><b>BARISHAL</b></a>
 </div>
  <!--map-->
+ 
  <div  style="width:100%; height:100%;">
- <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236206.4779141557!2d91.67977725733253!3d22.326191787611783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd8a64095dfd3%3A0x5015cc5bcb6905d9!2sChattogram!5e0!3m2!1sen!2sbd!4v1642530129447!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.8185594394895!2d91.83014896495578!3d22.360478835292394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ad277d5ce61f87%3A0x437fe414ed5dfdd9!2sChittagong%20Ambulance%20Service%2C%20K.B.%20Fazlul%20Kader%20Rd%2C%20Chittagong!5e0!3m2!1sen!2sbd!4v1643973067625!5m2!1sen!2sbd" width="1350" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
  
-
-
-  <!--map-->
+<!--map-->
 
 
   <footer class="page-footer">

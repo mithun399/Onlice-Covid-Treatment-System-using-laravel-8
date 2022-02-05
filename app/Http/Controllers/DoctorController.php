@@ -93,5 +93,9 @@ function doctorPayment(){
         $doctorpayment=Payment::all();
         return view('doctor.doctorpayment',compact('doctorpayment'));
 }
+function ddPayment($id){
+    $dd=Payment::find($id);
+    return view('doctor.ddpayment',compact('dd'));
+}
     
 }

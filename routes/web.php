@@ -74,7 +74,7 @@ Route::get('/helplines',[HomeController::class,'helplines']);
 Route::post('/icuform',[HomeController::class,'icuform']);
 
 
-Route::get('/payment',[HomeController::class,'payment']);
+Route::get('/payment/{id}',[HomeController::class,'payment']);
 
 Route::post('/upload_payment',[HomeController::class,'uploadPayment']);
 
@@ -199,6 +199,8 @@ Route::post('/upload_help',[AdminController::class,'uploadHelp']);
 Route::get('/add_admin',[AdminController::class,'addAdmin']);
 Route::post('/upload_admin',[AdminController::class,'uploadAdmin']);
 Route::get('/medicinepayment',[AdminController::class,'medicinePayment']);
+Route::get('/drpayment',[AdminController::class,'drPayment']);
+
 
 
 
@@ -233,3 +235,4 @@ Route::post('/edit/{id}',[DoctorController::class,'edit']);
 
 
 Route::get('/doctorpayment',[DoctorController::class,'doctorPayment']);
+Route::get('/ddpayment/{id}',[DoctorController::class,'ddPayment']);

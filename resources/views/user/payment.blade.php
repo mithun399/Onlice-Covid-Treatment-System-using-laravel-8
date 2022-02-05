@@ -132,7 +132,7 @@
           </div>
 
         @endif
-
+<a href="{{url('doctors')}}" class="btn btn-primary">Go Back</a>
 
 <div class="container" style="padding:20px;">
   <div class="row">
@@ -141,6 +141,11 @@
       <div class="card-body text-primary">
       <form action="{{url('upload_payment')}}" method="POST">
           @csrf
+          <div class="form-group">
+    <label>Doctor Name</label>
+    <input type="text" name="doctor" value="{{$doctors->name}}" class="form-control"  placeholder="Enter Doctor Name">
+    
+  </div>
   <div class="form-group">
     <label>Bkash Number</label>
     <input type="text" name="bkash" class="form-control"  placeholder="0164XXXXXXXX">
@@ -149,7 +154,7 @@
   
   <div class="form-group">
     <label>Amount</label>
-    <input type="text" name="amount" class="form-control"  placeholder="Amount..">
+    <input type="text" name="amount" value="{{$doctors->fee}}" class="form-control"  placeholder="Amount..">
   </div>
   <div class="form-group">
     <label>Transaction ID</label>

@@ -26,6 +26,8 @@ use App\Models\Organisation;
 use App\Models\Oxygen;
 use App\Models\Helpline;
 use App\Models\Order;
+use App\Models\Payment;
+
 use Crypt;
 
 
@@ -710,5 +712,9 @@ class AdminController extends Controller
     function medicinePayment(){
         $medicinepayment=Order::all();
         return view('admin.medicinepayment',compact('medicinepayment'));
+    }
+    function drPayment(){
+        $drpayment=Payment::all();
+        return view('admin.drpayment',compact('drpayment'));
     }
 }

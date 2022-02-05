@@ -19,7 +19,7 @@
               <p class="text-xl mb-0">{{$doctors->name}}</p>
               <p class="text-xl mb-0">Available:{{$doctors->time}}</p>
               <span class="text-sm text-grey">{{$doctors->speciality}}</span>
-              <p class="text-xl mb-0"> <a href="{{url('payment')}}"> Fees:{{$doctors->fee}}</a></p>
+              <p class="text-xl mb-0"> <a href="{{url('payment',$doctors->id)}}"> Fees:{{$doctors->fee}}</a></p>
               
             </div>
           </div>

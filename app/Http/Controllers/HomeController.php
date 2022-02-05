@@ -82,7 +82,7 @@ class HomeController extends Controller
             $appointment->user_id=Auth::user()->id;
         }
         $appointment->save();
-        return redirect()->back()->with('message','Appointment Request Successful.We will contact with you soon...');
+        return redirect()->back()->with('message','Appointment Request Successful.Pay and we will contact with you soon...');
         
 
     }
@@ -346,11 +346,13 @@ class HomeController extends Controller
         return redirect()->back()->with('message','Request Successfull,We will contact with you within 10 minutes');
         
     }
-    function payment(){
-        return view('user.payment');
+    function payment($id){
+       $doctors=Doctor::find($id);
+        return view('user.payment',compact('doctors'));
     }
     function uploadPayment(Request $req){
         $payment=new Payment;
+        $payment->doctor=$req->doctor;
         $payment->bkash=$req->bkash;
         $payment->amount=$req->amount;
         $payment->trxID=$req->trxID;

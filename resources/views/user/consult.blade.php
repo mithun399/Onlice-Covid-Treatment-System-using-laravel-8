@@ -127,7 +127,7 @@
 
 @include('user.appointment')
   
-
+@include('user.doctor')
 
 
 

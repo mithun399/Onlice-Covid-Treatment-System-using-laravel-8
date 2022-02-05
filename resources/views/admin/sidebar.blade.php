@@ -32,6 +32,12 @@
                 <span>All Doctors</span>
               </a>
             </li>
+            <li>
+              <a href="{{url('drpayment')}}" class="nav-link px-3 active">
+                <span class="me-2"><i class="mdi mdi-file-document-box"></i></span>
+                <span>Doctor Charge</span>
+              </a>
+            </li>
         <li>
           <div class="dropdown" style="padding:15px;">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">

@@ -1,3 +1,10 @@
+@if(session()->has('message'))
+          <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+          {{session()->get('message')}}
+          </div>
+
+        @endif
 <div class="page-section">
     <div class="container">
       <h1 class="text-center wow fadeInUp">Make an Appointment</h1>
