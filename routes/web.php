@@ -80,6 +80,13 @@ Route::post('/upload_payment',[HomeController::class,'uploadPayment']);
 
 
 Route::get('/search',[HomeController::class,'search']);
+Route::get('/prescription',[HomeController::class,'prescription']);
+Route::post('/store',[HomeController::class,'store']);
+Route::get('/show',[HomeController::class,'show']);
+Route::get('/download/{file}',[HomeController::class,'download']);
+Route::get('/view/{id}',[HomeController::class,'view']);
+
+
 
 
 

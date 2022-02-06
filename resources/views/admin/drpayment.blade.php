@@ -16,17 +16,18 @@
           <div class="col-md-12">
             <h4>Dashboard</h4>
           </div>
-          <div align="center" style="padding-top:50px;">
-            <b style=" font-size: 40px;">Doctor Charge</b>
+          <div align="center" style="padding-top:10px;">
+            <b style=" font-size: 40px;">DOCTOR CHARGE</b>
         </div>
-          <div align="center" style="padding-top:50px;">
+          <div align="center" style="padding-top:10px; padding-bottom:30px;">
         <table>
                 <tr style="background-color:black;" align="center">
                 <th style="padding:10px;font-size: 20px;color:white">Doctor Name</th>
                     <th style="padding:10px;font-size: 20px;color:white">Bkash</th>
                     <th style="padding:10px;font-size: 20px;color:white">Amount</th>
-
                     <th style="padding:10px;font-size: 20px;color:white">Transaction ID</th>
+                    <th style="padding:10px;font-size: 20px;color:white">Date And Time</th>
+
 
 
 
@@ -36,8 +37,9 @@
                 <td style="padding:10px;font-size: 20px;color:black">{{$dpayment->doctor}}</td>
                     <td style="padding:10px;font-size: 20px;color:black">{{$dpayment->bkash}}</td>
                     <td style="padding:10px;font-size: 20px;color:black">{{($dpayment->amount*10)/100}}</td>
-
                     <td style="padding:10px;font-size: 20px;color:black">{{$dpayment->trxID}}</td>
+                    <td style="padding:10px;font-size: 20px;color:black">{{$dpayment->created_at}}</td>
+
 
 
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use App\Models\Doctor;
 use App\Models\Appointment;
@@ -30,6 +31,8 @@ use App\Models\Oxygen;
 use App\Models\Helpline;
 use App\Models\Icu;
 use App\Models\Payment;
+use App\Models\Prescription;
+
 
 use Session;
 
@@ -368,6 +371,35 @@ class HomeController extends Controller
       
        return view('user.search',compact('doctor'));
        
+    }
+    function prescription(){
+        return view('user.prescription');
+    }
+    function store(Request $req){
+        $data=new Prescription;
+        $data->name=$req->name;
+        $data->dname=$req->dname;
+        $data->age=$req->age;
+        $file=$req->file;
+        $filename=time().'.'.$file->getClientOriginalExtension();
+        $req->file->move('assets',$filename);
+        $data->file=$filename;
+        $data->save();
+        return redirect()->back()->with('message','Prescription Successfully Uploaded');
+
+    }
+    function show(){
+        $show=Prescription::all();
+        return view('user.show',compact('show'));
+    }
+    function download(Request $req,$file){
+
+        return response()->download(public_path('assets/'.$file));
+    }
+    function view($id){
+        $view=Prescription::find($id);
+        return view('user.view',compact('view'));
+
     }
 
     }
