@@ -17,8 +17,8 @@
             <h4>Dashboard</h4>
           </div>
         </div>
-        <div align="center" style="padding-top:50px; font-size:20px;"><b>Doctor List</b></div>
-        <div align="center" style="padding-top:50px;">
+        <div align="center" style="padding-top:10px; font-size:20px;"><b>Doctor List</b></div>
+        <div align="center" style="padding-top:10px;">
         <table>
                 <tr style="background-color:black;">
                     <th style="padding:10px;font-size: 20px;color:white">Doctor Name</th>

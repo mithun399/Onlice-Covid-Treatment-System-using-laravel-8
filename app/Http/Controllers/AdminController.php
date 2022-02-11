@@ -27,7 +27,7 @@ use App\Models\Oxygen;
 use App\Models\Helpline;
 use App\Models\Order;
 use App\Models\Payment;
-
+use App\Models\Sample;
 use Crypt;
 
 
@@ -716,5 +716,9 @@ class AdminController extends Controller
     function drPayment(){
         $drpayment=Payment::all();
         return view('admin.drpayment',compact('drpayment'));
+    }
+    function sample(){
+        $sample= Sample::all();
+        return view('admin.sample',compact('sample'));
     }
 }

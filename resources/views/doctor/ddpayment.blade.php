@@ -12,10 +12,10 @@
           <div class="col-md-12">
             <a class="btn btn-primary" href="{{url('doctorpayment')}}">Go Back</a>
           </div>
-          <div align="center" style="padding-top:50px;">
+          <div align="center" style="padding-top:10px;">
             <b style=" font-size: 40px;">Doctor Payment View</b>
         </div>
-          <div align="center" style="padding-top:50px;">
+          <div align="center" style="padding-top:10px;">
         <table>
                 <tr style="background-color:black;" align="center">
                 
